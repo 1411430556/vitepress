@@ -7,6 +7,24 @@ export default defineConfig({
   title: '简言',
   description: '情感故事',
   themeConfig: {
+    lightModeSwitchTitle: '切换到浅色模式',
+    darkModeSwitchTitle: '切换到深色模式',
+    externalLinkIcon: true,
+    lastUpdated: {
+      text: '最后更新时间',
+      formatOptions: {
+        dateStyle: 'medium',
+        timeStyle: 'short'
+      }
+    },
+    editLink: {
+      pattern: 'https://github.com/1411430556/vitepress/edit/main/docs/:path',
+      text: '在 GitHub 上编辑此页'
+    },
+    docFooter: {
+      prev: '上一页',
+      next: '下一页'
+    },
     // https://vitepress.dev/reference/default-theme-config
     logo: '/logo.png',
     nav: [
