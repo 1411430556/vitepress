@@ -7,7 +7,7 @@ hero:
   text: "情感故事"
   tagline: 世上无难事，只怕有心人
   image:
-    src: /public/文档.png
+    src: /文档.png
     alt: 背景图
   actions:
     - theme: brand
