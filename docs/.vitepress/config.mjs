@@ -12,8 +12,8 @@ export default defineConfig({
       {
         text: '导航',
         items: [
-          { text: '主页', link: '/' },
-          { text: '情感故事', link: '/图书馆30秒.md' },
+          { text: '主页', link: '/index.md' },
+          { text: '情感故事', link: '/图书馆30秒' },
           { text: '哔哩哔哩', link: 'https://space.bilibili.com/44113085' },
         ],
       },
@@ -23,7 +23,7 @@ export default defineConfig({
       {
         text: '情感故事',
         items: [
-          { text: '图书馆30秒', link: '/图书馆30秒.md' },
+          { text: '图书馆30秒', link: '/图书馆30秒' },
           { text: 'Runtime API Examples', link: '/api-examples' },
         ],
       },
