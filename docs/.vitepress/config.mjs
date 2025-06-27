@@ -2,6 +2,7 @@ import { defineConfig } from 'vitepress'
 
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
+  base: '/vitepress/',
   head: [['link', { rel: 'icon', href: '/茶树菇.png' }]],
   title: '简言',
   description: '情感故事',
