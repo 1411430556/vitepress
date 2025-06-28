@@ -1,7 +1,47 @@
 import { defineConfig } from 'vitepress'
+import { AnnouncementPlugin } from 'vitepress-plugin-announcement'
 
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
+  vite: {
+    plugins: [
+      AnnouncementPlugin({
+        title: '公告',
+        body: [
+          { type: 'text', content: '👇公众号👇 ---👇 赞赏 👇' },
+          {
+            type: 'image',
+            src: 'https://cdn.upyun.sugarat.top/mdImg/sugar/85c9554d023be2fcc5aab94effeef033',
+            style: 'display: inline-block;width:46%;padding-right:6px',
+          },
+          {
+            type: 'image',
+            src: 'https://cdn.upyun.sugarat.top/mdImg/sugar/54eacf3e730af9c1e3542a4800a422ea',
+            style: 'display: inline-block;width:46%;padding-left:6px',
+          },
+        ],
+        footer: [
+          {
+            type: 'text',
+            content: '欢迎大家私信&加群交流',
+          },
+          {
+            type: 'button',
+            content: '作者博客',
+            link: 'https://sugarat.top',
+          },
+          {
+            type: 'button',
+            content: '博客主题',
+            link: 'https://theme.sugarat.top',
+            props: {
+              type: 'success',
+            },
+          },
+        ],
+      }),
+    ],
+  },
   base: '/vitepress',
   head: [['link', { rel: 'icon', href: '/vitepress/icon.png' }]],
   title: '简言',
@@ -14,16 +54,16 @@ export default defineConfig({
       text: '最后更新时间',
       formatOptions: {
         dateStyle: 'medium',
-        timeStyle: 'short'
-      }
+        timeStyle: 'short',
+      },
     },
     editLink: {
       pattern: 'https://github.com/1411430556/vitepress/edit/main/docs/:path',
-      text: '在 GitHub 上编辑此页'
+      text: '在 GitHub 上编辑此页',
     },
     docFooter: {
       prev: '上一页',
-      next: '下一页'
+      next: '下一页',
     },
     // https://vitepress.dev/reference/default-theme-config
     logo: '/logo.png',
