@@ -1,8 +1,9 @@
 import { defineConfig } from 'vitepress'
 import { AnnouncementPlugin } from 'vitepress-plugin-announcement'
+import { withSidebar } from 'vitepress-sidebar'
 
 // https://vitepress.dev/reference/site-config
-export default defineConfig({
+const vitePressOptions = {
   vite: {
     plugins: [
       AnnouncementPlugin({
@@ -78,16 +79,16 @@ export default defineConfig({
       },
     ],
 
-    sidebar: [
+     sidebar: [
       {
         text: '情感故事',
         items: [
-          { text: '图书馆30秒', link: '/图书馆30秒' },
-          { text: 'Runtime API Examples', link: '/api-examples' },
-          { text: 'Go初学者', link: '/Go初学者' },
+        { text: '图书馆30秒', link: '/图书馆30秒' },
+        { text: 'Runtime API Examples', link: '/api-examples' },
+        { text: 'Go初学者', link: '/Go初学者' },
         ],
       },
-    ],
+    ], 
 
     socialLinks: [
       { icon: 'github', link: 'https://github.com/1411430556' },
@@ -119,4 +120,14 @@ export default defineConfig({
       },
     },
   },
-})
+}
+
+const vitePressSidebarOptions = {
+  // VitePress Sidebar's options here...
+  documentRootPath: '/docs',
+  capitalizeEachWords: true,
+  rootGroupText: '情感故事',
+  rootGroupCollapsed: false,
+}
+
+export default defineConfig(withSidebar(vitePressOptions, vitePressSidebarOptions))
