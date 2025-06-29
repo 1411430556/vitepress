@@ -79,7 +79,7 @@ const vitePressOptions = {
       },
     ],
 
-     sidebar: [
+    /* sidebar: [
       {
         text: '情感故事',
         items: [
@@ -88,7 +88,7 @@ const vitePressOptions = {
         { text: 'Go初学者', link: '/Go初学者' },
         ],
       },
-    ], 
+    ],  */
 
     socialLinks: [
       { icon: 'github', link: 'https://github.com/1411430556' },
@@ -96,7 +96,7 @@ const vitePressOptions = {
     ],
     footer: {
       message: 'Released under the MIT License.',
-      copyright: 'Copyright © 2025-present <a href="https://github.com/1411430556">简言</a>',
+      copyright: 'Copyright © 2025-present <a href="https://github.com/1411430556">COYG⚡️</a>',
     },
     // 设置搜索框的样式
     search: {
