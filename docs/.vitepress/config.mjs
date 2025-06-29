@@ -84,6 +84,7 @@ export default defineConfig({
         items: [
           { text: '图书馆30秒', link: '/图书馆30秒' },
           { text: 'Runtime API Examples', link: '/api-examples' },
+          { text: 'Go初学者', link: '/Go初学者' },
         ],
       },
     ],
