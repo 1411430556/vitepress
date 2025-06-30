@@ -4,6 +4,13 @@ import { withSidebar } from 'vitepress-sidebar'
 
 // https://vitepress.dev/reference/site-config
 const vitePressOptions = {
+  markdown: {
+    lineNumbers: true,
+    math: true,
+    image: {
+      lazyLoading: true,
+    },
+  },
   vite: {
     plugins: [
       AnnouncementPlugin({
@@ -74,6 +81,7 @@ const vitePressOptions = {
         items: [
           { text: '主页', link: '/index.md' },
           { text: '情感故事', link: '/图书馆30秒' },
+          { text: 'Go初学者', link: '/Go初学者' },
           { text: '哔哩哔哩', link: 'https://space.bilibili.com/44113085' },
         ],
       },
