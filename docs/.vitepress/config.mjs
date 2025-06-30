@@ -1,5 +1,5 @@
 import { defineConfig } from 'vitepress'
-import { AnnouncementPlugin } from 'vitepress-plugin-announcement'
+// import { AnnouncementPlugin } from 'vitepress-plugin-announcement'
 import { withSidebar } from 'vitepress-sidebar'
 
 // https://vitepress.dev/reference/site-config
@@ -10,6 +10,10 @@ const vitePressOptions = {
     math: true,
     image: {
       lazyLoading: true,
+    },
+    theme: {
+      light: 'vitesse-light',
+      dark: 'vitesse-dark',
     },
   },
   /*   vite: {
@@ -106,7 +110,7 @@ const vitePressOptions = {
     ],
     footer: {
       message: 'Released under the MIT License.',
-      copyright: 'Copyright © 2025-present <a href="https://github.com/1411430556">COYG⚡️</a>',
+      copyright: 'Copyright © 2025-present <a target="_blank" href="https://github.com/1411430556">COYG⚡️</a>',
     },
     // 设置搜索框的样式
     search: {
