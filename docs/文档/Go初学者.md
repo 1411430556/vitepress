@@ -75,7 +75,7 @@ func main() {
 4. =和:=  
     前者为赋值 后者为声明变量并赋值 定义变量时可以不指定类型  
 5. iota(0) 常量生成器（注意若将Monday另外赋值 则再次出现itoa前 Monday后的值都会和Monday值相等）  
-```
+```go
 const ( 
     Sunday = iota   //即从0开始
     Monday
@@ -129,13 +129,13 @@ for 表达式1;表达式2;表达式3 {
 4. 不定参数(固定参数和不定参数同时存在时 不定参数放最后)  
     (args ...int) 格式为name ...type 可用args[i]取参数 可用len(args)得到长度 亦可使用range 返回两个字 第一个为索引 第二个为值  
 5. 不定参数函数调用  
-```
+```go
 func test1(args ...int) {
     test2(args[2:]...)  //只传递索引>=2的参数 反之则是<2的
 } 
 ```
 6. 带返回值函数
-```
+```go
 func add(args ...int) (int, int) {
     return a, b //即参数后为返回值类型 可以为多个 调用函数时可使用匿名变量 _ 筛除不需要的返回值
 }  
@@ -167,7 +167,7 @@ name := func() () {
     不同包之间调用必须导入包 注意要==导出的函数名首字母必须大==写 不导出的小写  
     import的路径是src(先浏览GOROOT 再GOPATH)下 导入src的下两级目录时 需加上路径
 12. 导包格式
-```
+```go
 import (
     //"包名" 或者依次import
 )
@@ -273,7 +273,7 @@ import (
 ### 5.19
 1. ==结构体==  
     定义  
-```
+```go
     type Student struct {
     	id int          //注意结构体成员没有var
     	name string
@@ -283,7 +283,7 @@ import (
     }
 ```
     结构体初始化
-```
+```go
     var s1 Student = Student{1, "mike", 'm', 18, "hz"}	//顺序初始化则每个成员都需初始化
  或 s2 := Student{name: "mike", addr: "hz"}	            //指定初始化 未初始化的为0
     var s3 Student				                        //亦可定义完 不初始化 使用时再赋值
@@ -293,7 +293,7 @@ import (
     同类型的结构体变量可以互相赋值  
     结构体是一种类型 则可以结合数组 切片 map等  
 2. 指针变量  
-```
+```go
     var p *int  //定义指针变量 p 未初始化的指针是nil(表示无值)
     var i int   
     p = &i      //将i的地址赋给p
@@ -303,7 +303,7 @@ import (
 ```
     指针作为函数参数实质依然是值传递 不会改变指针本身 但是可改变指针指向内容  
 3. 结构体变量和结构体指针
-```
+```go
     p := test{3}
 	q := &test{4} 		//指针和结构体变量访问结构体元素的方式一样
 	fmt.Println(p.a)	//但需注意作为参数时 结构体变量是值传递 指针能修改原结构体中的元素
@@ -313,7 +313,7 @@ import (
     GO语言中没有类概念 可将结构体比作为类 因为在结构体中可以添加属性（成员），方法（函数）  
     4.1 通过==匿名组合==实现(元素)继承 可将一个结构体类型的类型名(不设变量名)放在另一个结构体中 称为匿名字段  ==匿名字段可以是结构体指针== 但注意使用时要初始化
     初始化方式
-```
+```go
     type Person struct {
     	id int
     	name string
@@ -363,7 +363,7 @@ import (
     接口 类似==虚函数==(virtual) 把具体类型变量赋值给接口类型 则可通过接口变量调用具体类型的方法 类似于c++通过父类指针调用子类函数  
     此外空接口是任何类型的接口  
    1.1 ==多态== 通过把参数设置为接口类型 则不同的"子类"作为参数时 表现不同  
-```
+```go
 type Tester interface {
 	doit(a Integer) Integer //此处是接口中方法的声明 方法名(参数) 返回值
 }
@@ -397,13 +397,13 @@ func main() {
     插播一条消息 c++ ==右值引用==&&是解决临时变量作为参数传递时 提前被释放的问题 比起拷贝成本更低  
     const& 确保此引用变量在函数中使用时不能被改变(比起直接加形参 引用的成本更低一些 但是又要避免修改 则加上const)  
 
-```
+```go
     var c interface{} = 2   //对于空接口类型变量 可以使用类型断言判断是不是某类型
 	value, ok := c.(int)    //返回值1为值 2为bool类型
 ```
 3. 异常处理  
     3.1 error接口(适用于一般错误)  
-```
+```go
     type error interface {
         Error() string 
     }
@@ -415,7 +415,7 @@ func main() {
     }
 ```
     3.2 用法举例  
-```
+```go
 func Test(a, b int) (result int, err error) {
 	err = nil
 	if b == 0 {
@@ -431,13 +431,13 @@ result, err := Test(3, 0)   //调试时可打印err值 查看错误情况
     3.3 panic()函数 //程序存在越界 空指针引用等致命错误时 系统调用此函数 程序崩溃并打印日志  
     3.4 延迟调用defer   //保证程序在任何情况都会调用defer后面的函数 多个defer则先进后出  
     3.5 defer配合匿名函数  
-```
+```go
     defer func() {
     	fmt.Println("匿名函数")
     } ()	
 ```
     3.6 defer结合recover  
-```
+```go
     defer结合recover	//适用于拦截panic 从程序崩溃情况中恢复
     
     defer func() {
@@ -451,7 +451,7 @@ result, err := Test(3, 0)   //调试时可打印err值 查看错误情况
 ```
     3.7 文本文件处理  
     创建文件  
-```
+```go
     import "os"
     
     func CreateFile (path string) {
@@ -468,7 +468,7 @@ result, err := Test(3, 0)   //调试时可打印err值 查看错误情况
     }
 ```
     写入数据  
-```
+```go
     紧跟上述文件类型变量 
     n, err := f.WriteString("Hello")	//实际中可以结合fmt.Sprintf()使用
     				//返回值1为写入数据长度 2为错误信息
@@ -480,7 +480,7 @@ result, err := Test(3, 0)   //调试时可打印err值 查看错误情况
     a, err = f.WriteAt(buf, n)	    	//从末尾偏移量开始写入内容(参数1 字节切片)
 ```
     打开文件  
-```
+```go
     f, err := os.OpenFile(path, os.O_APPEND, 6)
     
     OpenFile( )这个函数有三个参数
@@ -500,7 +500,7 @@ result, err := Test(3, 0)   //调试时可打印err值 查看错误情况
     7:读权限，写权限，执行权限
 ```
     读取文件  
-```
+```go
     读取文件的基本流程如下：
     （1）打开要读取的文件
     （2）对文件进行读取
@@ -518,7 +518,7 @@ result, err := Test(3, 0)   //调试时可打印err值 查看错误情况
     }
 ```
     行读取  
-```
+```go
     首先打开文件 但是为了缓和CPU和磁盘设备之间速度不匹配的问题 先将文件读到缓冲区 使用bufio包中的NewReader() ReadBytes()函数
     
     f, err := os.open(path)
@@ -543,7 +543,7 @@ result, err := Test(3, 0)   //调试时可打印err值 查看错误情况
 ### 5.23 file操作再探 + GoRoutine(协程)--并发编程  
 1. file操作  
     文件创建
-```
+```go
     fileName := "../a.txt"  //..为上一层目录 工程中一般使用相对路径
 	file, err := os.Create(fileName)    //Create默认为666权限
 	if err != nil {
@@ -553,7 +553,7 @@ result, err := Test(3, 0)   //调试时可打印err值 查看错误情况
 	fmt.Println(file)
 ```
     目录创建  
-```
+```go
     fmt.Println(time.Now().Format("20060102150405"))    //时间的格式很多
     
     t := time.Now().Format("20060102150405")    //尽量使用这个时间来定义格式 否则可能出错
@@ -566,12 +566,12 @@ result, err := Test(3, 0)   //调试时可打印err值 查看错误情况
 	}
 ```
     删除文件 目录
-```
+```go
     os.Remove()，删除文件和空目录
 	os.RemoveAll()，删除目录及目录下的文件
 ```
     文件拷贝(io包下Copy() 或者分别调用read write接口函数 或者ioutil.WriteFile ReadFile)  
-```
+```go
     func copyFile2(srcFile, destFile string)(int64,error) {
 	file1,err:=os.Open(srcFile)
 	if err != nil{

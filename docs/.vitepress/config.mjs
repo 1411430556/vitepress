@@ -4,6 +4,7 @@ import { withSidebar } from 'vitepress-sidebar'
 
 // https://vitepress.dev/reference/site-config
 const vitePressOptions = {
+  lang: 'zh-CN',
   markdown: {
     lineNumbers: true,
     math: true,
@@ -11,7 +12,7 @@ const vitePressOptions = {
       lazyLoading: true,
     },
   },
-  vite: {
+  /*   vite: {
     plugins: [
       AnnouncementPlugin({
         title: '公告',
@@ -49,12 +50,13 @@ const vitePressOptions = {
         ],
       }),
     ],
-  },
+  }, */
   base: '/vitepress',
   head: [['link', { rel: 'icon', href: '/vitepress/icon.png' }]],
   title: '简言',
   description: '情感故事',
   themeConfig: {
+    outline: [2, 6],
     lightModeSwitchTitle: '切换到浅色模式',
     darkModeSwitchTitle: '切换到深色模式',
     externalLinkIcon: true,
@@ -80,8 +82,8 @@ const vitePressOptions = {
         text: '导航',
         items: [
           { text: '主页', link: '/index.md' },
-          { text: '情感故事', link: '/图书馆30秒' },
-          { text: 'Go初学者', link: '/Go初学者' },
+          { text: '情感故事', link: '/文档/图书馆30秒' },
+          { text: 'Go初学者', link: '/文档/Go初学者' },
           { text: '哔哩哔哩', link: 'https://space.bilibili.com/44113085' },
         ],
       },
@@ -134,7 +136,7 @@ const vitePressSidebarOptions = {
   // VitePress Sidebar's options here...
   documentRootPath: '/docs',
   capitalizeEachWords: true,
-  rootGroupText: '情感故事',
+  // rootGroupText: '文章',
   rootGroupCollapsed: false,
 }
 
