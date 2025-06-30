@@ -1,8 +1,9 @@
 # 简言
 
-![GitHub stars](https://img.shields.io/github/stars/1411430556/vitepress?style=flat-square&logo=github)
-![GitHub forks](https://img.shields.io/github/forks/1411430556/vitepress?style=flat-square&logo=github)
-![GitHub issues](https://img.shields.io/github/issues/1411430556/vitepress?style=flat-square&logo=github)
+![GitHub stars](https://img.shields.io/github/stars/1411430556/vitepress?style=flat-square&logo=github&color=yellow&label=Stars)
+![GitHub forks](https://img.shields.io/github/forks/1411430556/vitepress?style=flat-square&logo=github&color=blue&label=Forks)
+![GitHub issues](https://img.shields.io/github/issues/1411430556/vitepress?style=flat-square&logo=github&color=red&label=Issues)
+![GitHub commits](https://img.shields.io/github/commit-activity/t/1411430556/vitepress?style=flat-square&logo=github&color=green&label=Commits&include_all_commits)
 ![GitHub license](https://img.shields.io/github/license/1411430556/vitepress?style=flat-square&logo=github)
 ![VitePress](https://img.shields.io/badge/VitePress-1.6.3-brightgreen?style=flat-square&logo=vite)
 ![Vue](https://img.shields.io/badge/Vue-3.0+-brightgreen?style=flat-square&logo=vue.js)
