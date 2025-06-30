@@ -63,6 +63,7 @@ const vitePressOptions = {
     outline: [2, 6],
     lightModeSwitchTitle: '切换到浅色模式',
     darkModeSwitchTitle: '切换到深色模式',
+    // 是否在 markdown 中的外部链接旁显示外部链接图标
     externalLinkIcon: true,
     lastUpdated: {
       text: '最后更新时间',
