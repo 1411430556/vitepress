@@ -60,12 +60,22 @@ pnpm docs:preview
 │   ├── .vitepress/      # VitePress 配置目录
 │   │   ├── config.mjs   # VitePress 配置文件
 │   │   ├── theme/       # 主题自定义目录
+│   │   │   ├── index.ts     # 主题入口文件
+│   │   │   ├── custom.css   # 自定义样式
+│   │   │   ├── sidebar.css  # 侧边栏样式
+│   │   │   └── style.css    # 全局样式
 │   │   ├── cache/       # 缓存目录
 │   │   └── dist/        # 构建输出目录
 │   ├── public/          # 静态资源目录
+│   │   ├── images/      # 图片资源
+│   │   ├── videos/      # 视频资源
+│   │   └── *.png        # 其他静态资源
 │   ├── 文档/            # 文档内容目录
 │   └── *.md             # Markdown 内容文件
-└── package.json         # 项目依赖和脚本
+├── package.json         # 项目依赖和脚本
+├── pnpm-lock.yaml       # pnpm 依赖锁定文件
+├── .prettierrc          # Prettier 配置文件
+└── LICENSE              # 许可证文件
 ```
 
 ## 技术栈
