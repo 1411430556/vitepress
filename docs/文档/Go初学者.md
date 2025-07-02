@@ -1,5 +1,5 @@
 # GO初学者
-
+ @1411430556
 ### 5.11 初步规划 重点是语言 其他的可以先涉猎
 - 计划本周熟悉go全部语法 
 - 一个月+攒代码 2W行+
@@ -147,14 +147,14 @@ fun add(args ...int) (a int, b int) {
 }
 ```
 7. 函数类型(类似于函数指针)  
-```
+```go
  type name func(a int, b int) (c int, d int)    //此处name即是一个类型为形参(a int, b int) 返回值(c int, d int)的函数类型
 ```
 8. 变量作用域  
     局部变量 全局变量 (表达式中的变量仅在表达式中有效 函数内变量仅在函数内且定义处之后有效 全局变量在定义处或声明处之后有效 C++)  
     golang 全局变量在任何地方都是能够使用的 go没有声明
 9. 匿名函数(一般在内部使用)  
-```
+```go
 name := func() () {
     //DO 通过name去调用 此处name是函数类型        
 }
@@ -203,7 +203,7 @@ import (
         
     13.3 ==字符串 package "strings"==
     
-```
+```go
         Contains
         func Contains(s,substrstring) bool
         功能：字符串s中是否包含substr，返回bool值
@@ -237,7 +237,7 @@ import (
         功能：去除s字符串的空格符，并且按照空格分割返回slice
 ```
     13.4 ==字符串转换 ”strconv” == 
-```
+```go
     Format 系列函数把其他类型的转换为字符串
     FormatBool(false)	//bool转字符串
     Itoa(333)		//整型转字符串
@@ -254,7 +254,7 @@ import (
     
 ```
     13.5 Map 定义 map[keyType]valueType
-```
+```go
     注意 键的类型，必须是支持==和!=操作符的类型，切片、函数以及包含切片的结构类型不行
 
     var mTest map[int]string
@@ -338,7 +338,7 @@ import (
         接受者参数必须被()括住，并且声明在func和函数名称之间。 
     
     ！接收者为指针时 才能修改原变量的值
-```
+```go
     给类型T和*T(指针)声明一个方法:
         T必须是定义的类型
         T的定义必须跟方法定义的在同一个包中。//所以只能给内置类型的别名声明方法 效果一样
@@ -637,7 +637,7 @@ result, err := Test(3, 0)   //调试时可打印err值 查看错误情况
     临界资源安全问题的解决  
     在Go语言中并不鼓励用锁保护共享状态的方式在不同的Goroutine中分享信息(以共享内存的方式去通信)。而是鼓励通过**channel**将共享状态或共享状态的变化在各个Goroutine之间传递（以通信的方式去共享内存），这样同样能像用锁一样保证在同一的时间只有一个Goroutine访问共享状态。  
 6. sync包  
-```
+```go
 WaitGroup
 一个WaitGroup的用途是等待一个goroutine的集合执行完成。
 主goroutine调用了Add()方法来设置要等待的goroutine的数量。
@@ -683,7 +683,7 @@ Unlock()方法
 写锁解锁，如果没有进行写锁定，则就会引起一个运行时错误。
 ```
 9. go关键词 创建协程(主协程结束 子协程会被回收)  
-```
+```go
 func hello() {
 	fmt.Println("hello goroutine")
 
@@ -697,7 +697,7 @@ func main() {
 }
 ```
 10. 使用sync包启动多个goroutine
-```
+```go
 func hello(i int) {
 	defer wg.Done() // goroutine结束就登记-1
 	fmt.Println("Hello Goroutine!", i)
@@ -715,7 +715,7 @@ func main() {
     Go语言强烈建议的是使用Channel通道来实现Goroutines之间的通信(传统的方式为共享内存)  
     Go从语言层面保证同一个时间只有一个goroutine能够访问channel里面的数据，Go的做法就是使用channel来通信，通过通信来传递内存数据，使得内存数据在不同的goroutine中传递，而不是使用共享内存来通信。  
     声明与创建通道
-```
+```go
 //声明通道
 var 通道名 chan 数据类型
 //创建通道：如果通道为nil(就是不存在)，就需要先创建通道
@@ -725,7 +725,7 @@ a := make(chan int) //亦可简短声明
 ```
     通道使用的注意点
     对于单向通道 一般用作形参 在特定函数只需要读 或者 写 用于限制
-```
+```go
 Channel通道在使用的时候，有以下几个注意点：
 
 - 1.用于goroutine，传递消息的。
@@ -743,14 +743,14 @@ Channel通道在使用的时候，有以下几个注意点：
 最后：通道是goroutine之间的连接，所以通道的发送和接收必须处在不同的goroutine中。
 ```
     通道接收 发送语法  
-```
+```go
 data := <- a // read from channel a  
 a <- data // write to channel a
 
 v, ok := <- a //从一个channel中读取 如果该通道打开ok为true 反之为false 此时v值为channel对应类型的零值
 ```
     可利用for range从一个通道获取数据
-```
+```go
 func main()  {
 	ch1 :=make(chan int)
 	go sendData(ch1)
@@ -769,7 +769,7 @@ func sendData(ch1 chan int)  {
 }
 ```
     缓冲通道(带缓冲可以理解为异步模式 无缓冲则是同步)
-```
+```go
 ch := make(chan type, capacity) //可给通道指定容量 只有当容量满了才会阻塞
                                 //需注意接收和发送对应 否则会死锁
 ```
@@ -784,7 +784,7 @@ ch := make(chan type, capacity) //可给通道指定容量 只有当容量满了
 		用于参数传递(将双向通道作为参数传递给只处理通道读或写的函数)
 ```
     time包中的通道相关函数
-```
+```go
 t:= time.NewTimer(d)   //返回值是一个*timer 但是需要通过通道获取时间 <-t.C
 t:= time.AfterFunc(d, f)
 c:= time.After(d)
@@ -803,7 +803,7 @@ func After(d Duration) <-chan Time
 			返回一个通道：chan，存储的是d时间间隔后的当前时间
 ```
     select语句  
-```
+```go
 select {
     case communication clause  :
        statement(s);      
@@ -846,13 +846,13 @@ Go语言的CSP模型 CSP 是 Communicating Sequential Process 的简称，中文
         c. 编译器可能无法识别反射代码的错误  
 
     反射就是用来检测存储在接口变量内部(值value；类型concrete type) pair对的一种机制  
-```
+```go
     func ValueOf(i interface{}) Value {...}
     func TypeOf(i interface{}) Type {...}
     reflect.TypeOf()是获取pair中的type，reflect.ValueOf()获取pair中的value
 ```
     反射 API 的分类总结如下:  
-```
+```go
 从实例到 Value
 func ValueOf(i interface {}) Value
 
@@ -960,7 +960,7 @@ func (v Value ) Set(x Value)
     Socket是应用层与TCP/IP协议族通信的中间软件抽象层，它把复杂的TCP/IP协议族隐藏在Socket后面，对用户来说只需要调用Socket规定的相关函数，让Socket去组织符合指定的协议数据然后进行通信。   
 3.TCP编程  
     TCP服务端程序处理流程及代码
-```
+```go
 1.监听端口
 2.接收客户端请求建立链接
 3.创建goroutine处理链接。
@@ -1007,7 +1007,7 @@ func main() {
 }
 ```
     TCP客户端程序处理流程及代码
-```
+```go
 1.建立与服务端的链接
 2.进行数据收发
 3.关闭链接
@@ -1055,7 +1055,7 @@ func main() {
 ```
 4. udp编程  
     一种无连接的传输层协议，不需要建立连接就能直接进行数据发送和接收，属于不可靠的、没有时序的通信，但是UDP协议的实时性比较好，通常用于视频直播相关领域  
-```
+```go
 udp服务端
 
 // UDP/server/main.go
@@ -1119,7 +1119,7 @@ func main() {
 
 a.由Nagle算法造成的发送端的粘包：Nagle算法是一种改善网络传输效率的算法。简单来说就是当我们提交一段数据给TCP发送时，TCP并不立刻发送此段数据，而是等待一小段时间看看在等待期间是否还有要发送的数据，若有则会一次把这两段数据发送出去。  
 b.接收端接收不及时造成的接收端粘包：TCP会把接收到的数据存在自己的缓冲区中，然后通知应用层取数据。当应用层由于某些原因不能及时的把TCP的数据取出来，就会造成TCP缓冲区中存放了几段数据。  
-```
+```go
 编码解码
 
 // socket_stick/proto/proto.go
@@ -1244,7 +1244,7 @@ func main() {
            小端(little endian) 数据在存储器中的存放顺序 高高低低 即高地址对应高字节  
            
     字节数组转化为int32(和binary.Write对应 4个字节)
-```
+```go
     pack1 := make([]byte, 4)
     _, err = reader.Read(pack1)
     lenbuf := bytes.NewBuffer(pack1)
@@ -2025,7 +2025,7 @@ func main() {
 }
 ```
     局部中间件  
-```
+```go
 // 给/test2路由单独注册中间件（可注册多个）
 	r.GET("/test2", StatCost(), func(c *gin.Context) {
 		name := c.MustGet("name").(string) // 从上下文取值
@@ -2108,7 +2108,7 @@ init方法分析完毕后，程序会继续往下执行，就到了main函数，
 **基础路由**，**固定路由**，**正则路由**和**自动路由**
 ```
 6、beego连接数据库  
-```
+```go
 //dbConn := user + ":" + pwd + "@tcp(" + host + ":" + port + ")/" + dbname + "?charset=utf8"
 //我丢 需要启动服务(管理员模式命令行 net start mysql)
 dbConn := "root:mysql@tcp(127.0.0.1:3306)/myblogweb?charset=utf8"
@@ -2131,7 +2131,7 @@ dbConn := "root:mysql@tcp(127.0.0.1:3306)/myblogweb?charset=utf8"
 
 ### 6.24 博客还得慢慢来 加油
 1、MySQL更新字段值  
-```
+```go
 update 表名 set 字段名 = '要修改的值' where 条件;
 例子：
 update student set name = '张三' where sno='2012001' ;
@@ -2140,7 +2140,7 @@ update student set name = '张三' where sno='2012001' ;
 文件中 driverName = mysql  
 取配置 conf.string("字段")  
 3、包的特殊引入方式  
-```
+```go
 1. 点操作   有时候会看到如下的方式导入包     import( . “fmt” ) 
 
 这个点操作的含义就是这个包导入之后在你调用这个包的函数时，你可以省略前缀的包名，也就是前面你调用的fmt.Println(“hello world”)  可以省略的写成Println(“hello world”)
