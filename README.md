@@ -7,7 +7,7 @@
 ![GitHub license](https://img.shields.io/github/license/1411430556/vitepress?style=flat-square&logo=github)
 ![VitePress](https://img.shields.io/badge/VitePress-1.6.3-brightgreen?style=flat-square&logo=vite)
 ![Vue](https://img.shields.io/badge/Vue-3.0+-brightgreen?style=flat-square&logo=vue.js)
-![Node](https://img.shields.io/badge/Node-16.0+-brightgreen?style=flat-square&logo=node.js)
+![Node](https://img.shields.io/badge/Node-22.16.0-brightgreen?style=flat-square&logo=node.js)
 ![pnpm](https://img.shields.io/badge/pnpm-10.12.3-blue?style=flat-square&logo=pnpm)
 
 这是一个基于 [VitePress](https://vitepress.dev/) 构建的个人网站，主要用于分享情感故事和个人创作。
