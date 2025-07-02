@@ -68,7 +68,6 @@ pnpm docs:preview
 │   │   └── dist/        # 构建输出目录
 │   ├── public/          # 静态资源目录
 │   │   ├── images/      # 图片资源
-│   │   ├── videos/      # 视频资源
 │   │   └── *.png        # 其他静态资源
 │   ├── 文档/            # 文档内容目录
 │   └── *.md             # Markdown 内容文件

@@ -1,49 +1,43 @@
 {
-  "hash": "ecfb5acb",
+  "hash": "a96dcbc1",
   "configHash": "12d4912d",
-  "lockfileHash": "2aae2d88",
-  "browserHash": "979495e3",
+  "lockfileHash": "6fe4868a",
+  "browserHash": "236ccfc7",
   "optimized": {
     "vue": {
       "src": "../../../../node_modules/.pnpm/vue@3.5.17/node_modules/vue/dist/vue.runtime.esm-bundler.js",
       "file": "vue.js",
-      "fileHash": "867861a6",
+      "fileHash": "f4ce954a",
       "needsInterop": false
     },
     "vitepress > @vue/devtools-api": {
       "src": "../../../../node_modules/.pnpm/@vue+devtools-api@7.7.7/node_modules/@vue/devtools-api/dist/index.js",
       "file": "vitepress___@vue_devtools-api.js",
-      "fileHash": "8fa3ee36",
+      "fileHash": "73d863ff",
       "needsInterop": false
     },
     "vitepress > @vueuse/core": {
       "src": "../../../../node_modules/.pnpm/@vueuse+core@12.8.2/node_modules/@vueuse/core/index.mjs",
       "file": "vitepress___@vueuse_core.js",
-      "fileHash": "e2176d79",
+      "fileHash": "bee6d0d2",
       "needsInterop": false
     },
     "vitepress > @vueuse/integrations/useFocusTrap": {
       "src": "../../../../node_modules/.pnpm/@vueuse+integrations@12.8.2_focus-trap@7.6.5_nprogress@0.2.0/node_modules/@vueuse/integrations/useFocusTrap.mjs",
       "file": "vitepress___@vueuse_integrations_useFocusTrap.js",
-      "fileHash": "0283b53d",
+      "fileHash": "72b90812",
       "needsInterop": false
     },
     "vitepress > mark.js/src/vanilla.js": {
       "src": "../../../../node_modules/.pnpm/mark.js@8.11.1/node_modules/mark.js/src/vanilla.js",
       "file": "vitepress___mark__js_src_vanilla__js.js",
-      "fileHash": "82d6593c",
+      "fileHash": "b0248e8a",
       "needsInterop": false
     },
     "vitepress > minisearch": {
       "src": "../../../../node_modules/.pnpm/minisearch@7.1.2/node_modules/minisearch/dist/es/index.js",
       "file": "vitepress___minisearch.js",
-      "fileHash": "5689c1a1",
-      "needsInterop": false
-    },
-    "vitepress-plugin-nprogress": {
-      "src": "../../../../node_modules/.pnpm/vitepress-plugin-nprogress@0.0.4/node_modules/vitepress-plugin-nprogress/lib/vitepress-plugin-nprogress.js",
-      "file": "vitepress-plugin-nprogress.js",
-      "fileHash": "985e5189",
+      "fileHash": "030aa874",
       "needsInterop": false
     }
   },
