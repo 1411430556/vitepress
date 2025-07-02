@@ -24,14 +24,14 @@ func main() {
 
 ### 5.14
 1. 普通变量定义与自动变量定义 
-```
+```go
     var name type = value（可以不指定类型）  
     name := value
 ```
 2. 匿名变量  
     _   //即单一下划线 在返回多个变量中可用来表示不需要的变量  
 3. 多重赋值与变量置换 
-```
+```go
     a, b := 10, 20  
     a, b = b, a    //利用多重赋值交换变量  
     a = a + b  
@@ -39,7 +39,7 @@ func main() {
     a = a - b   //方法2 利用加减  
 ```
 4. 输入  
-```
+```go
     Scan(&name)  
     Scanf("", &name)    //即格式化输入
 ```
@@ -47,7 +47,7 @@ func main() {
     以字母或者下划线开头 后续跟字母 数字 下划线 不能将关键词用作变量名  
     命名法 大驼峰 小驼峰 下划线 匈牙利
 6. 基础数据类型  
-```
+```go
     int uint(根据编译器决定32或64位)  
     int8 int16 int32 int64  
     uint8(byte)..
@@ -55,7 +55,7 @@ func main() {
     bool string
 ```
 7. 格式化
-```    
+```go    
     %d 十进制整数  
     %x, %o, %b 十六进制，八进制，二进制整数。  
     %f, %g, %e 浮点数： 3.141593 自动选择一种紧凑的方式 3.141593e+00   
@@ -90,7 +90,7 @@ const (
     将变量用固定值替代的方法 例如var temp string = "CAN1"  
     将会导致维护的时候 不好直接修改变量 可以使用类似宏定义的方法 易于修改维护
 7. 运算符(go没有前自增/自减 a++ 等同于a+=1)
-```
+```go
 * / % << >> & &^（按位置零 即先将右边按位取反再和左边与运算）
 + - | ^ 
 == != < <= > >=
@@ -110,15 +110,16 @@ const (
 3. switch  
     默认自带break（如果想要继续执行下面的case 可以使用fallthrough）  
 4. 循环结构 go只有for  
-```
+```go
 for 表达式1;表达式2;表达式3 {  
     循环体   
-}  
-    
+}      
 ```
+
     表达式1中不能包含var 可以使用:=定义变量  
     可以只含有表达式2或啥也不含（死循环，类似于while（1），可用break退出） 其他表达式若省略 分号不能省略
     课时1结束
+
 5.  if a := 1; a > 0    //分号前面是初始化临时变量 和for类似
 ### 5.18
 1. break与continue  
@@ -183,8 +184,8 @@ import (
             一般直接定义成切片更好
         多维数组初始化时 每一个数组都需要用 {}  //相当之规范
 ```
-    13.2 切片(slice) 即不指定长度 可理解为动态数组  
-            可用append追加元素(append()函数，第一个参数表示向哪个切片追加数据，后面表示具体追加的数据，当追加元素后容量不足时会自动扩容，容量小于1024时 2倍扩容)  
+13.2 切片(slice) 即不指定长度 可理解为动态数组  
+    可用append追加元素(append()函数，第一个参数表示向哪个切片追加数据，后面表示具体追加的数据，当追加元素后容量不足时会自动扩容，容量小于1024时 2倍扩容)  
 ```
         定义方法一 var a []int  //空切片  
         定义方法二 a := []int{1, 2, 3}  //定义并初始化
@@ -828,13 +829,12 @@ select {
 
   如果没有default字句，select将阻塞，直到某个通信可以运行；Go不会重新对channel或值进行求值。
 ```
-    Go语言的CSP模型  
-    CSP 是 Communicating Sequential Process 的简称，中文可以叫做通信顺序进程  
-    Golang，其实只用到了 CSP 的很小一部分，即理论中的 Process/Channel（对应到语言中的 goroutine/channel）：这两个并发原语之间没有从属关系， Process 可以订阅任意个 Channel，Channel 也并不关心是哪个 Process 在利用它进行通信；Process 围绕 Channel 进行读写，形成一套有序阻塞和可预测的并发模型。
+
+Go语言的CSP模型 CSP 是 Communicating Sequential Process 的简称，中文可以叫做通信顺序进程，Golang,其实只用到了 CSP 的很小一部分，即理论中的 Process/Channel（对应到语言中的 goroutine/channel）：这两个并发原语之间没有从属关系， Process 可以订阅任意个 Channel，Channel 也并不关心是哪个 Process 在利用它进行通信；Process 围绕 Channel 进行读写，形成一套有序阻塞和可预测的并发模型。
     
-    有了 channel 和 goroutine 之后，Go 的并发编程变得异常容易和安全，得以让程序员把注意力留到业务上去，实现开发效率的提升
+有了 channel 和 goroutine 之后，Go 的并发编程变得异常容易和安全，得以让程序员把注意力留到业务上去，实现开发效率的提升
     
-    技术并不是最重要的，它只是实现业务的工具。一门高效的开发语言让你把节省下来的时间，留着去做更有意义的事情，比如写写文章
+技术并不是最重要的，它只是实现业务的工具。一门高效的开发语言让你把节省下来的时间，留着去做更有意义的事情，比如写写文章
 12. 反射  
     在计算机科学中，反射是指计算机程序在运行时（Run time）可以访问、检测和修改它本身状态或行为的一种能力  
     常见场景:  
@@ -1268,7 +1268,7 @@ func main() {
     //ListenAndServe 监听的链接-端口  
     ////Write方法 回复数据  
 
-```
+```go
 package main
 
 import (
@@ -1304,7 +1304,7 @@ func myHandler(w http.ResponseWriter, r *http.Request) {
     //defer resp.Body.Close() 程序使用完后 关闭回复主题  
     //resp.Body.Read(buf) 对应服务端的write 接收服务端消息  
     
-```
+```go
 package main
 
 import (
@@ -1557,7 +1557,7 @@ redis 基于内存的数据库 主要是键值对 用于高速读写 高并发 �
     git clone https://e.coding.net/robinqiwei/googleprotobuf.git protobuf  
 2、hello world程序(localhost 127.0.0.1)  
     即监听此端口 hello world是服务器的返回  
-```
+```go
 package main
 
 import (
@@ -1592,7 +1592,7 @@ DELETE用来删除资源
     httprouter是一个高性能、可扩展的HTTP路由(net/http的加强版)  
 5、API参数  
     在url中包含参数 通过gin.Context解析  
-```
+```go
 package main
 
 import (
@@ -1616,7 +1616,7 @@ func main() {
 }
 ```
 6、url中querystring参数(?后参数)  
-```
+```go
 package main
 
 import (
@@ -1645,7 +1645,7 @@ func main() {
     application/xml  
     multipart/form-data  
     表单参数可以通过PostForm()方法获取，该方法默认解析的是x-www-form-urlencoded或from-data格式的参数  
-```
+```html
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -1662,7 +1662,9 @@ func main() {
     </form>
 </body>
 </html>
+```
 
+```go
 package main
 
 //
@@ -1687,7 +1689,7 @@ func main() {
 ```
 8、单个文件上传  
     multipart/form-data格式用于文件上传  
-```
+```html
 <!DOCTYPE html>
 <html lang="zh-CN">
 <head>
@@ -1700,7 +1702,9 @@ func main() {
 </form>
 </body>
 </html>
+```
 
+```go
 func main() {
 	router := gin.Default()
 	// 处理multipart forms提交文件时默认的内存限制是32 MiB
@@ -1729,7 +1733,7 @@ func main() {
 ```
 9、多个文件上传  
     前端部分增加关键字 后端部分for遍历处理files    
-```
+```go
 <input type="file" name="files" multiple> <!--增加关键字multiple-->
 
 func main() {
@@ -1759,7 +1763,7 @@ func main() {
     管理一些相同的url  
     我们可以将拥有共同URL前缀的路由划分为一个路由组。习惯性一对{}包裹同组的路由，这只是为了看着清晰，你用不用{}包裹功能上没什么区别  
     路由组支持嵌套  
-```
+```go
 func main() {
 	r := gin.Default()
 	userGroup := r.Group("/user")
@@ -1789,7 +1793,7 @@ func main() {
     如果是 GET 请求，只使用 Form 绑定引擎（query）。  
     如果是 POST 请求，首先检查 content-type 是否为 JSON 或 XML，然后再使用 Form（form-data） 
     可用.ShouldBindJSON() .ShouldBindUri()..具体解析  
-```
+```go
 // Binding from JSON
 type Login struct {
 	User     string `form:"user" json:"user" binding:"required"`
@@ -1847,7 +1851,7 @@ func main() {
 }
 ```
 14、重定向  
-```
+```go
 http重定向
 r.GET("/test", func(c *gin.Context) {
 	c.Redirect(http.StatusMovedPermanently, "http://www.sogo.com/")
@@ -1870,7 +1874,7 @@ r.GET("/test2", func(c *gin.Context) {
 16、同步异步  
     goroutine机制可以方便地实现异步处理  
     另外，在启动新的goroutine时，不应该使用原始上下文，必须使用它的只读副本  
-```
+```go
 package main
 
 import (
@@ -1905,7 +1909,7 @@ func main() {
 ```
 17、多服务  
     可以在多个端口启动服务  
-```
+```go
 package main
 
 import (
@@ -1986,7 +1990,7 @@ func main() {
     
     定义中间件  
     Gin中的中间件必须是一个gin.HandlerFunc类型  
-```
+```go
 // StatCost 是一个统计耗时请求耗时的中间件
 func StatCost() gin.HandlerFunc {
 	return func(c *gin.Context) {
@@ -2003,7 +2007,7 @@ func StatCost() gin.HandlerFunc {
 }
 ```
     为全局路由注册中间件  
-```
+```go
 func main() {
 	// 新建一个没有任何默认中间件的路由
 	r := gin.New()
@@ -2049,7 +2053,7 @@ func main() {
     可以被禁用  
     cookie有上限  
     
-    Sessions  
+Sessions  
     一般考虑安全的数据用session 反之用cookie
     cookie数据存放在客户的浏览器上，session数据放在服务器上  
     当访问服务器否个网页的时候，会在服务器端的内存里开辟一块内存，这块内存就叫做session，而这个内存是跟浏览器关联在一起的。这个浏览器指的是浏览器窗口，或者是浏览器的子窗口，意思就是，只允许当前这个session对应的浏览器访问，就算是在同一个机器上新启的浏览器也是无法访问的  
@@ -2196,11 +2200,3 @@ tag--> 111111111111111
     栈 队列 二叉树 链表 数组 字符串  
     冒泡 快排 二分查找 动态规划 深度优先 迭代(具体见刷题记录)  
 2、简历上写的内容一定要熟悉(一边投简历 一边继续熟悉)
-
-
-
-
-
-
-
-
