@@ -1,3 +1,5 @@
+<div align="center">
+  
 # 简言
 
 ![GitHub stars](https://img.shields.io/github/stars/1411430556/vitepress?style=flat-square&logo=github&color=yellow&label=Stars)
@@ -10,7 +12,10 @@
 ![Node](https://img.shields.io/badge/Node-22.16.0-brightgreen?style=flat-square&logo=node.js)
 ![pnpm](https://img.shields.io/badge/pnpm-10.12.3-blue?style=flat-square&logo=pnpm)
 
+[![Security Status](https://www.murphysec.com/platform3/v31/badge/1940988725560365056.svg)](https://www.murphysec.com/console/report/1940988725426147328/1940988725560365056)
+
 这是一个基于 [VitePress](https://vitepress.dev/) 构建的个人网站，主要用于分享情感故事和个人创作。
+</div>
 
 ## 功能特点
 
