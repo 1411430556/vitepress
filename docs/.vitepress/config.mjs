@@ -6,8 +6,8 @@ import footnote from 'markdown-it-footnote'
 // https://vitepress.dev/reference/site-config
 const vitePressOptions = {
   lang: 'zh-CN',
-  metaChunk: true,
   ignoreDeadLinks: true,
+  metaChunk: true,
   markdown: {
     lineNumbers: true,
     math: true,
