@@ -1,11 +1,13 @@
 import { defineConfig } from 'vitepress'
 // import { AnnouncementPlugin } from 'vitepress-plugin-announcement'
 import { withSidebar } from 'vitepress-sidebar'
+import footnote from 'markdown-it-footnote'
 
 // https://vitepress.dev/reference/site-config
 const vitePressOptions = {
   lang: 'zh-CN',
   ignoreDeadLinks: true,
+  metaChunk: true,
   markdown: {
     lineNumbers: true,
     math: true,
@@ -16,6 +18,9 @@ const vitePressOptions = {
       light: 'vitesse-light',
       dark: 'vitesse-dark',
     },
+    config: (md) => {
+      md.use(footnote)
+    }
   },
   /*   vite: {
     plugins: [
