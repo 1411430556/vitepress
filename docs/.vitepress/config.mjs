@@ -55,7 +55,7 @@ const vitePressOptions = {
       }),
     ],
   }, */
-  base: '/vitepress/',
+  base: '/vitepress',
   head: [['link', { rel: 'icon', href: '/vitepress/icon.png' }]],
   title: '简言',
   description: '情感故事',

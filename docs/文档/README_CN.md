@@ -1,6 +1,6 @@
 # ZZZ模拟器
 
-[English](../README.md) | 中文
+[English](./README.md) | 中文
 
 ## 项目介绍
 
