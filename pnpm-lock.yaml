@@ -22,8 +22,8 @@ importers:
         specifier: ^1.6.3
         version: 1.6.3(@algolia/client-search@5.29.0)(markdown-it-mathjax3@4.3.2)(nprogress@0.2.0)(postcss@8.5.6)(search-insights@2.17.3)
       vitepress-sidebar:
-        specifier: ^1.31.1
-        version: 1.31.1
+        specifier: ^1.32.1
+        version: 1.32.1
 
 packages:
 
@@ -1070,8 +1070,8 @@ packages:
     peerDependencies:
       vitepress: ^1
 
-  vitepress-sidebar@1.31.1:
-    resolution: {integrity: sha512-Hx10z5le87jIIXVfKq4AtRrVqVJJ/1cQsZhmwT+ghVR/j4Yor9FjNMszyigJ54ktrEtoxSLO6C9tvuLauT4lZA==}
+  vitepress-sidebar@1.32.1:
+    resolution: {integrity: sha512-OMLeQ7jfgZqR6jbqEtMcHkcy1Pr434Grxc0fQlnJRSLc8XtWAJvEMxCWhDQcZ3m3O9UODbf9aa92lLOZ8CLsBA==}
     engines: {node: '>=18.0.0'}
 
   vitepress@1.6.3:
@@ -2151,7 +2151,7 @@ snapshots:
       javascript-stringify: 2.1.0
       vitepress: 1.6.3(@algolia/client-search@5.29.0)(markdown-it-mathjax3@4.3.2)(nprogress@0.2.0)(postcss@8.5.6)(search-insights@2.17.3)
 
-  vitepress-sidebar@1.31.1:
+  vitepress-sidebar@1.32.1:
     dependencies:
       glob: 10.4.5
       gray-matter: 4.0.3
