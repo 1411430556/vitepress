@@ -1,4 +1,6 @@
 ---
+title: api-examples
+order: 7
 outline: deep
 ---
 

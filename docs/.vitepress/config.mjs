@@ -93,8 +93,8 @@ const vitePressOptions = {
         text: '导航',
         items: [
           { text: '主页', link: '/index.md' },
-          { text: '情感故事', link: '/文档/图书馆30秒' },
-          { text: 'Go初学者', link: '/文档/Go初学者' },
+          { text: '情感故事', link: '/文档/6-图书馆30秒' },
+          { text: 'Go初学者', link: '/文档/7-Go初学者' },
           { text: '哔哩哔哩', link: 'https://space.bilibili.com/44113085' },
         ],
       },
@@ -147,8 +147,17 @@ const vitePressSidebarOptions = {
   // VitePress Sidebar's options here...
   documentRootPath: '/docs',
   capitalizeEachWords: true,
-  // rootGroupText: '文章',
-  rootGroupCollapsed: false,
+  rootGroupCollapsed: null,
+  collapsed: true,
+  collapseDepth: 2,
+  capitalizeFirst: true,
+  // sortMenusByName: true,
+  sortMenusByFrontmatterOrder: true,
+  // 如果值为 true，则显示带有 .md 文件中 h1 标题内容的标题。如果文件中不存在 h1 标题，则显示 Unknown。
+  // useTitleFromFileHeading: true,
+
+  // 根据文件Frontmatter中title的值显示标题
+  useTitleFromFrontmatter: true,
 }
 
 export default defineConfig(withSidebar(vitePressOptions, vitePressSidebarOptions))

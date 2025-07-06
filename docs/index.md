@@ -12,10 +12,10 @@ hero:
   actions:
     - theme: brand
       text: 开始
-      link: /文档/图书馆30秒.md
+      link: /文档/1-ZZZ_Simulator
     - theme: alt
       text: API Examples
-      link: /文档/api-examples
+      link: /文档/8-api-examples
 
 features:
   - icon: ⚡️

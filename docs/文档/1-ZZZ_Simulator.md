@@ -1,10 +1,15 @@
+---
+title: ZZZ_Simulator
+order: 0
+---
+
 # ZZZ_Simulator
 
-English | [中文](./README_CN.md)
+English | [中文](./2-ZZZ模拟器.md)
 
-![zsim](../public/images/zsim成图.svg)
+![zsim](../images/zsim成图.svg)
 
-![zsim项目组](../public/images/横板logo成图.png)
+![zsim项目组](../images/横板logo成图.png)
 
 
 
