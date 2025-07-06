@@ -2,6 +2,9 @@
   "devDependencies": {
     "markdown-it-footnote": "^4.0.0",
     "markdown-it-mathjax3": "^4.3.2",
+    "medium-zoom": "^1.1.0",
+    "nprogress-v2": "^1.1.10",
+    "sass-embedded": "^1.89.2",
     "vitepress": "^1.6.3",
     "vitepress-sidebar": "^1.32.1"
   },
@@ -11,6 +14,7 @@
     "docs:preview": "vitepress preview docs"
   },
   "dependencies": {
-    "vitepress-plugin-announcement": "^0.1.4"
+    "vitepress-plugin-announcement": "^0.1.4",
+    "vitepress-plugin-group-icons": "^1.6.1"
   }
 }

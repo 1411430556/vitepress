@@ -11,8 +11,6 @@ English | [中文](./2-ZZZ模拟器.md)
 
 ![zsim项目组](../public/images/横板logo成图.png)
 
-
-
 ## Introduction
 
 `ZZZ_Calculator` is a damage calculator for Zenless Zone Zero.

@@ -1,4 +1,5 @@
 import { defineConfig } from 'vitepress'
+import { groupIconMdPlugin, groupIconVitePlugin } from 'vitepress-plugin-group-icons'
 // import { AnnouncementPlugin } from 'vitepress-plugin-announcement'
 import { withSidebar } from 'vitepress-sidebar'
 import footnote from 'markdown-it-footnote'
@@ -19,12 +20,14 @@ const vitePressOptions = {
       dark: 'vitesse-dark',
     },
     config: (md) => {
-      md.use(footnote)
+      md.use(footnote, groupIconMdPlugin)
     }
   },
-  /*   vite: {
+    vite: {
     plugins: [
-      AnnouncementPlugin({
+      // 代码组图标
+      groupIconVitePlugin(),
+      /* AnnouncementPlugin({
         title: '公告',
         body: [
           { type: 'text', content: '👇公众号👇 ---👇 赞赏 👇' },
@@ -58,9 +61,9 @@ const vitePressOptions = {
             },
           },
         ],
-      }),
+      }), */
     ],
-  }, */
+  },
   base: '/vitepress',
   head: [['link', { rel: 'icon', href: '/vitepress/icon.png' }]],
   title: '简言',

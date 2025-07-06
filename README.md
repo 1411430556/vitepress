@@ -26,6 +26,10 @@
 - 自动生成侧边栏导航
 - 数学公式支持
 - 图片懒加载
+- 代码组图标支持
+- 脚注功能
+- 自定义主题
+- 图片缩放预览
 
 ## 本地开发
 
@@ -66,28 +70,31 @@ pnpm docs:preview
 │   │   ├── config.mjs   # VitePress 配置文件
 │   │   ├── theme/       # 主题自定义目录
 │   │   │   ├── index.ts     # 主题入口文件
-│   │   │   ├── custom.css   # 自定义样式
-│   │   │   ├── sidebar.css  # 侧边栏样式
-│   │   │   └── style.css    # 全局样式
+│   │   │   ├── MyLayout.vue # 自定义布局组件
+│   │   │   └── style/       # 样式目录
 │   │   ├── cache/       # 缓存目录
 │   │   └── dist/        # 构建输出目录
 │   ├── public/          # 静态资源目录
 │   │   ├── images/      # 图片资源
 │   │   └── *.png        # 其他静态资源
 │   ├── 文档/            # 文档内容目录
+│   ├── 策略/            # 策略内容目录
 │   └── *.md             # Markdown 内容文件
 ├── package.json         # 项目依赖和脚本
 ├── pnpm-lock.yaml       # pnpm 依赖锁定文件
-├── .prettierrc          # Prettier 配置文件
 └── LICENSE              # 许可证文件
 ```
 
 ## 技术栈
 
 - [VitePress](https://vitepress.dev/) v1.6.3 - 静态网站生成器
-- [vitepress-sidebar](https://www.npmjs.com/package/vitepress-sidebar) v1.31.1 - 自动生成侧边栏
+- [vitepress-sidebar](https://www.npmjs.com/package/vitepress-sidebar) v1.32.1 - 自动生成侧边栏
 - [markdown-it-mathjax3](https://www.npmjs.com/package/markdown-it-mathjax3) v4.3.2 - 数学公式支持
+- [markdown-it-footnote](https://www.npmjs.com/package/markdown-it-footnote) v4.0.0 - 脚注功能
+- [vitepress-plugin-group-icons](https://www.npmjs.com/package/vitepress-plugin-group-icons) v1.6.1 - 代码组图标
 - [vitepress-plugin-announcement](https://www.npmjs.com/package/vitepress-plugin-announcement) v0.1.4 - 公告插件
+- [medium-zoom](https://www.npmjs.com/package/medium-zoom) v1.1.0 - 图片缩放
+- [nprogress-v2](https://www.npmjs.com/package/nprogress-v2) v1.1.10 - 进度条
 
 ## 部署
 
