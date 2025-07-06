@@ -7,9 +7,9 @@ order: 0
 
 English | [中文](./2-ZZZ模拟器.md)
 
-![zsim](../images/zsim成图.svg)
+![zsim](../public/images/zsim成图.svg)
 
-![zsim项目组](../images/横板logo成图.png)
+![zsim项目组](../public/images/横板logo成图.png)
 
 
 
