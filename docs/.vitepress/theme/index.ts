@@ -1,7 +1,7 @@
 // https://vitepress.dev/guide/custom-theme
 import { h, watch, onMounted, nextTick } from 'vue'
 import mediumZoom from 'medium-zoom'
-import { useRoute } from 'vitepress'
+import { useRoute, inBrowser } from 'vitepress'
 import type { Theme } from 'vitepress'
 import DefaultTheme from 'vitepress/theme'
 // 代码组图标
@@ -13,9 +13,8 @@ import './style/index.scss'
 // 明亮、暗黑模式切换
 import MyLayout from './MyLayout.vue'
 // 切换路由进度条
-// import { inBrowser } from 'vitepress'
-// import { NProgress } from 'nprogress-v2/dist/index.js' // 进度条组件
-// import 'nprogress-v2/dist/index.css' // 进度条样式
+import { NProgress } from 'nprogress-v2/dist/index.js' // 进度条组件
+import 'nprogress-v2/dist/index.css' // 进度条样式
 
 
 // 彩虹背景动画样式
@@ -46,6 +45,17 @@ export default {
     })
   },
   enhanceApp({ app, router, siteData }) {
+    // 切换路由进度条
+    if (inBrowser) {
+      NProgress.configure({ showSpinner: false })
+      router.onBeforeRouteChange = () => {
+        NProgress.start() // 开始进度条
+      }
+      router.onAfterRouteChanged = () => {
+         NProgress.done() // 停止进度条
+      }
+    }
+    
     // ...
     // 彩虹背景动画样式
     if (typeof window !== 'undefined') {
