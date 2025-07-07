@@ -51,7 +51,7 @@ export default {
       router.onBeforeRouteChange = () => {
         NProgress.start() // 开始进度条
       }
-      router.onAfterRouteChanged = () => {
+      router.onAfterRouteChange = () => {
          NProgress.done() // 停止进度条
       }
     }
