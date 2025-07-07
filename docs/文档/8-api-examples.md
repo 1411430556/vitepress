@@ -1,6 +1,4 @@
 ---
-title: api-examples
-order: 7
 outline: deep
 ---
 
@@ -49,3 +47,38 @@ const { site, theme, page, frontmatter } = useData()
 ## More
 
 Check out the documentation for the [full list of runtime APIs](https://vitepress.dev/reference/runtime-api#usedata).
+
+::: code-group
+
+```js [config.js]
+/**
+ * @type {import('vitepress').UserConfig}
+ */
+const config = {
+  // ...
+}
+
+export default config
+```
+
+```ts [config.ts]
+import type { UserConfig } from 'vitepress'
+
+const config: UserConfig = {
+  // ...
+}
+
+export default config
+```
+
+:::
+
+![效果图](https://i.theojs.cn/logo/Lumen-Logo.webp)
+
+![浅色模式{.light-only}](https://i.theojs.cn/logo/github.svg)
+
+![深色模式{.dark-only}](https://i.theojs.cn/logo/github-dark.svg)
+
+![深色模式](https://i.theojs.cn/logo/github-dark.svg#dark)
+
+![浅色模式](https://i.theojs.cn/logo/github.svg#light)
