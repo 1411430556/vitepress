@@ -3,9 +3,9 @@
 layout: home
 
 hero:
-  name: "简言"
-  text: "情感故事"
-  tagline: 世上无难事，只怕有心人
+  name: 简言
+  text: 仍怜故乡水,万里送行舟
+  tagline: 大鹏一日同风起，扶摇直上九万里
   image:
     src: /文档.png
     alt: 背景图
@@ -29,3 +29,8 @@ features:
     details: Lorem ipsum dolor sit amet, consectetur adipiscing elit
 ---
 
+<!-- 首页下划线组件 -->
+<HomeUnderline />
+
+<!-- 五彩纸屑组件 -->
+<confetti />

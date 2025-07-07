@@ -19,49 +19,55 @@ const vitePressOptions = {
       light: 'vitesse-light',
       dark: 'vitesse-dark',
     },
-    config: (md) => {
+    config: md => {
       md.use(footnote, groupIconMdPlugin)
-    }
+      // 在 h1 下增加字数以及阅读时间
+      md.renderer.rules.heading_close = (tokens, idx, options, env, slf) => {
+        let htmlResult = slf.renderToken(tokens, idx, options)
+        if (tokens[idx].tag === 'h1') htmlResult += `<ArticleMetadata />` // [!code focus]
+        return htmlResult
+      }
+    },
   },
-    vite: {
+  vite: {
     plugins: [
       // 代码组图标
       groupIconVitePlugin(),
-      /* AnnouncementPlugin({
-        title: '公告',
-        body: [
-          { type: 'text', content: '👇公众号👇 ---👇 赞赏 👇' },
-          {
-            type: 'image',
-            src: 'https://cdn.upyun.sugarat.top/mdImg/sugar/85c9554d023be2fcc5aab94effeef033',
-            style: 'display: inline-block;width:46%;padding-right:6px',
-          },
-          {
-            type: 'image',
-            src: 'https://cdn.upyun.sugarat.top/mdImg/sugar/54eacf3e730af9c1e3542a4800a422ea',
-            style: 'display: inline-block;width:46%;padding-left:6px',
-          },
-        ],
-        footer: [
-          {
-            type: 'text',
-            content: '欢迎大家私信&加群交流',
-          },
-          {
-            type: 'button',
-            content: '作者博客',
-            link: 'https://sugarat.top',
-          },
-          {
-            type: 'button',
-            content: '博客主题',
-            link: 'https://theme.sugarat.top',
-            props: {
-              type: 'success',
-            },
-          },
-        ],
-      }), */
+      // AnnouncementPlugin({
+      //   title: '公告',
+      //   body: [
+      //     { type: 'text', content: '👇公众号👇 ---👇 赞赏 👇' },
+      //     {
+      //       type: 'image',
+      //       src: 'https://cdn.upyun.sugarat.top/mdImg/sugar/85c9554d023be2fcc5aab94effeef033',
+      //       style: 'display: inline-block;width:46%;padding-right:6px',
+      //     },
+      //     {
+      //       type: 'image',
+      //       src: 'https://cdn.upyun.sugarat.top/mdImg/sugar/54eacf3e730af9c1e3542a4800a422ea',
+      //       style: 'display: inline-block;width:46%;padding-left:6px',
+      //     },
+      //   ],
+      //   footer: [
+      //     {
+      //       type: 'text',
+      //       content: '欢迎大家私信&加群交流',
+      //     },
+      //     {
+      //       type: 'button',
+      //       content: '作者博客',
+      //       link: 'https://sugarat.top',
+      //     },
+      //     {
+      //       type: 'button',
+      //       content: '博客主题',
+      //       link: 'https://theme.sugarat.top',
+      //       props: {
+      //         type: 'success',
+      //       },
+      //     },
+      //   ],
+      // }),
     ],
   },
   base: '/vitepress',
@@ -103,24 +109,14 @@ const vitePressOptions = {
       },
     ],
 
-    /* sidebar: [
-      {
-        text: '情感故事',
-        items: [
-        { text: '图书馆30秒', link: '/图书馆30秒' },
-        { text: 'Runtime API Examples', link: '/api-examples' },
-        { text: 'Go初学者', link: '/Go初学者' },
-        ],
-      },
-    ],  */
-
     socialLinks: [
       { icon: 'github', link: 'https://github.com/1411430556' },
       { icon: 'bilibili', link: 'https://space.bilibili.com/44113085' },
     ],
     footer: {
       message: 'Released under the MIT License.',
-      copyright: 'Copyright © 2025-present <a target="_blank" href="https://github.com/1411430556">COYG⚡️</a>',
+      copyright:
+        'Copyright © 2025-present <a target="_blank" href="https://github.com/1411430556">COYG⚡️</a>',
     },
     // 设置搜索框的样式
     search: {

@@ -4,6 +4,15 @@ import mediumZoom from 'medium-zoom'
 import { useRoute, inBrowser } from 'vitepress'
 import type { Theme } from 'vitepress'
 import DefaultTheme from 'vitepress/theme'
+// 首页文字下划线
+import HomeUnderline from './components/HomeUnderline.vue'
+// 五彩纸屑
+import confetti from './components/confetti.vue'
+// 鼠标粒子效果
+import MouseClick from './components/MouseClick.vue'
+import MouseFollower from './components/MouseFollower.vue'
+// 字数及阅读时间
+import ArticleMetadata from "./components/ArticleMetadata.vue"
 // 代码组图标
 import 'virtual:group-icons.css'
 import './style.css'
@@ -11,11 +20,10 @@ import './style.css'
 import './style/medium-zoom.scss'
 import './style/index.scss'
 // 明亮、暗黑模式切换
-import MyLayout from './MyLayout.vue'
+import MyLayout from './components/MyLayout.vue'
 // 切换路由进度条
 import { NProgress } from 'nprogress-v2/dist/index.js' // 进度条组件
 import 'nprogress-v2/dist/index.css' // 进度条样式
-
 
 // 彩虹背景动画样式
 let homePageStyle: HTMLStyleElement | undefined
@@ -45,6 +53,12 @@ export default {
     })
   },
   enhanceApp({ app, router, siteData }) {
+    // 注册全局组件
+    app.component('HomeUnderline', HomeUnderline)
+    app.component('confetti', confetti)
+    app.component('MouseClick', MouseClick)
+    app.component('MouseFollower', MouseFollower)
+    app.component('ArticleMetadata', ArticleMetadata)
     // 切换路由进度条
     if (inBrowser) {
       NProgress.configure({ showSpinner: false })
@@ -52,10 +66,10 @@ export default {
         NProgress.start() // 开始进度条
       }
       router.onAfterRouteChange = () => {
-         NProgress.done() // 停止进度条
+        NProgress.done() // 停止进度条
       }
     }
-    
+
     // ...
     // 彩虹背景动画样式
     if (typeof window !== 'undefined') {
