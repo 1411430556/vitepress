@@ -6,15 +6,16 @@ import type { Theme } from 'vitepress'
 import DefaultTheme from 'vitepress/theme'
 // 代码组图标
 import 'virtual:group-icons.css'
-// import './style.css'
-import './custom.css'
-import './style/rainbow.css'
+import './style.css'
+// import './custom.css'
 import './style/medium-zoom.scss'
-import './style/index.css'
+import './style/index.scss'
+// 明亮、暗黑模式切换
 import MyLayout from './MyLayout.vue'
-
-import { NProgress } from 'nprogress-v2/dist/index.js' // 进度条组件
-import 'nprogress-v2/dist/index.css' // 进度条样式
+// 切换路由进度条
+// import { inBrowser } from 'vitepress'
+// import { NProgress } from 'nprogress-v2/dist/index.js' // 进度条组件
+// import 'nprogress-v2/dist/index.css' // 进度条样式
 
 
 // 彩虹背景动画样式
