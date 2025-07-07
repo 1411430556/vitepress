@@ -1,4 +1,11 @@
 {
+  "name": "偷偷日记",
+  "private": true,
+  "version": "1.0.0",
+  "author": "COYG⚡",
+  "license": "MIT",
+  "homepage": "https://1411430556.github.io/vitepress/",
+  "packageManager": "pnpm@10.12.3",
   "devDependencies": {
     "@mdit/plugin-figure": "^0.22.1",
     "canvas-confetti": "^1.9.3",
@@ -17,7 +24,6 @@
   },
   "dependencies": {
     "@theojs/lumen": "^6.0.0",
-    "vitepress-plugin-announcement": "^0.1.4",
     "vitepress-plugin-group-icons": "^1.6.1"
   }
 }

@@ -1,4 +1,6 @@
 ---
+title: api-examples
+order: 7
 outline: deep
 ---
 
@@ -72,13 +74,3 @@ export default config
 ```
 
 :::
-
-![效果图](https://i.theojs.cn/logo/Lumen-Logo.webp)
-
-![浅色模式{.light-only}](https://i.theojs.cn/logo/github.svg)
-
-![深色模式{.dark-only}](https://i.theojs.cn/logo/github-dark.svg)
-
-![深色模式](https://i.theojs.cn/logo/github-dark.svg#dark)
-
-![浅色模式](https://i.theojs.cn/logo/github.svg#light)

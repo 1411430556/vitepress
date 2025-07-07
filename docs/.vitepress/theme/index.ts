@@ -1,8 +1,8 @@
 // https://vitepress.dev/guide/custom-theme
 import { h, watch, onMounted, nextTick } from 'vue'
-import mediumZoom from 'medium-zoom'
 import { useRoute, inBrowser } from 'vitepress'
 import type { Theme } from 'vitepress'
+import mediumZoom from 'medium-zoom'
 import DefaultTheme from 'vitepress/theme'
 // 首页文字下划线
 import HomeUnderline from './components/HomeUnderline.vue'
@@ -10,6 +10,7 @@ import HomeUnderline from './components/HomeUnderline.vue'
 import confetti from './components/confetti.vue'
 // 鼠标粒子效果
 import MouseClick from './components/MouseClick.vue'
+// 鼠标粒子跟随效果
 import MouseFollower from './components/MouseFollower.vue'
 // 字数及阅读时间
 import ArticleMetadata from "./components/ArticleMetadata.vue"

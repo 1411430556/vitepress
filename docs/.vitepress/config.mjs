@@ -1,6 +1,5 @@
 import { defineConfig } from 'vitepress'
 import { groupIconMdPlugin, groupIconVitePlugin } from 'vitepress-plugin-group-icons'
-// import { AnnouncementPlugin } from 'vitepress-plugin-announcement'
 import { withSidebar } from 'vitepress-sidebar'
 import footnote from 'markdown-it-footnote'
 import { figure } from '@mdit/plugin-figure'
@@ -21,7 +20,7 @@ const vitePressOptions = {
       dark: 'vitesse-dark',
     },
     config: md => {
-      md.use(footnote, groupIconMdPlugin, figure)
+      md.use(figure, footnote, groupIconMdPlugin)
       // 在 h1 下增加字数以及阅读时间
       md.renderer.rules.heading_close = (tokens, idx, options, env, slf) => {
         let htmlResult = slf.renderToken(tokens, idx, options)
@@ -34,47 +33,12 @@ const vitePressOptions = {
     plugins: [
       // 代码组图标
       groupIconVitePlugin(),
-      // AnnouncementPlugin({
-      //   title: '公告',
-      //   body: [
-      //     { type: 'text', content: '👇公众号👇 ---👇 赞赏 👇' },
-      //     {
-      //       type: 'image',
-      //       src: 'https://cdn.upyun.sugarat.top/mdImg/sugar/85c9554d023be2fcc5aab94effeef033',
-      //       style: 'display: inline-block;width:46%;padding-right:6px',
-      //     },
-      //     {
-      //       type: 'image',
-      //       src: 'https://cdn.upyun.sugarat.top/mdImg/sugar/54eacf3e730af9c1e3542a4800a422ea',
-      //       style: 'display: inline-block;width:46%;padding-left:6px',
-      //     },
-      //   ],
-      //   footer: [
-      //     {
-      //       type: 'text',
-      //       content: '欢迎大家私信&加群交流',
-      //     },
-      //     {
-      //       type: 'button',
-      //       content: '作者博客',
-      //       link: 'https://sugarat.top',
-      //     },
-      //     {
-      //       type: 'button',
-      //       content: '博客主题',
-      //       link: 'https://theme.sugarat.top',
-      //       props: {
-      //         type: 'success',
-      //       },
-      //     },
-      //   ],
-      // }),
     ],
   },
   base: '/vitepress',
-  head: [['link', { rel: 'icon', href: '/vitepress/icon.png' }]],
-  title: '简言',
-  description: '情感故事',
+  head: [['link', { rel: 'icon', href: '/vitepress/蒙面人小偷.svg' }]],
+  title: '偷偷日记',
+  description: '偷偷日记',
   themeConfig: {
     outline: [2, 6],
     lightModeSwitchTitle: '切换到浅色模式',
@@ -97,7 +61,7 @@ const vitePressOptions = {
       next: '下一页',
     },
     // https://vitepress.dev/reference/default-theme-config
-    logo: '/logo.png',
+    logo: '/蒙面人小偷.svg',
     nav: [
       {
         text: '导航',
@@ -114,11 +78,13 @@ const vitePressOptions = {
       { icon: 'github', link: 'https://github.com/1411430556' },
       { icon: 'bilibili', link: 'https://space.bilibili.com/44113085' },
     ],
+
     footer: {
       message: 'Released under the MIT License.',
       copyright:
         'Copyright © 2025-present <a target="_blank" href="https://github.com/1411430556">COYG⚡️</a>',
     },
+
     // 设置搜索框的样式
     search: {
       provider: 'local',
@@ -155,7 +121,6 @@ const vitePressSidebarOptions = {
   sortMenusByFrontmatterOrder: true,
   // 如果值为 true，则显示带有 .md 文件中 h1 标题内容的标题。如果文件中不存在 h1 标题，则显示 Unknown。
   // useTitleFromFileHeading: true,
-
   // 根据文件Frontmatter中title的值显示标题
   useTitleFromFrontmatter: true,
 }

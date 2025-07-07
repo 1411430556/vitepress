@@ -3,11 +3,11 @@
 layout: home
 
 hero:
-  name: 简言
+  name: 偷偷日记
   text: 仍怜故乡水,万里送行舟
   tagline: 大鹏一日同风起，扶摇直上九万里
   image:
-    src: /文档.png
+    src: /蒙面人小偷.svg
     alt: 背景图
   actions:
     - theme: brand

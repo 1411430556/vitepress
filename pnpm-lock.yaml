@@ -11,9 +11,6 @@ importers:
       '@theojs/lumen':
         specifier: ^6.0.0
         version: 6.0.0(vue@3.5.17(typescript@5.8.3))
-      vitepress-plugin-announcement:
-        specifier: ^0.1.4
-        version: 0.1.4(vitepress@1.6.3(@algolia/client-search@5.29.0)(markdown-it-mathjax3@4.3.2)(nprogress@0.2.0)(postcss@8.5.6)(sass-embedded@1.89.2)(search-insights@2.17.3)(typescript@5.8.3))
       vitepress-plugin-group-icons:
         specifier: ^1.6.1
         version: 1.6.1(markdown-it@14.1.0)(vite@5.4.19(sass-embedded@1.89.2))
@@ -899,9 +896,6 @@ packages:
   jackspeak@3.4.3:
     resolution: {integrity: sha512-OGlZQpz2yfahA/Rd1Y8Cd9SIEsqvXkLVoSw/cgwhnhFMDbsQFeZYoJJ7bIZBS9BcamUW96asq/npPWugM+RQBw==}
 
-  javascript-stringify@2.1.0:
-    resolution: {integrity: sha512-JVAfqNPTvNq3sB/VHQJAFxN/sPgKnsKrCwyRt15zwNCdrMMJDdcEOdubuy+DuJYYdm0ox1J4uzEuYKkN+9yhVg==}
-
   js-yaml@3.14.1:
     resolution: {integrity: sha512-okMH7OXXJ7YrN9Ok3/SXrnu4iX9yOk+25nqX4imS2npuvTYDmo/QEZoqwZkYaIDk3jVvBOTOIEgEhaLOynBS9g==}
     hasBin: true
@@ -1387,11 +1381,6 @@ packages:
         optional: true
       terser:
         optional: true
-
-  vitepress-plugin-announcement@0.1.4:
-    resolution: {integrity: sha512-3z39IJmN1GOyLwIZtGLV9uMUdH5xonMV+ELUgFZ0TOrF+1+HEFQo0gXYF+5tbFZcqEJgU5ESPLM29nkfzSRToQ==}
-    peerDependencies:
-      vitepress: ^1
 
   vitepress-plugin-group-icons@1.6.1:
     resolution: {integrity: sha512-eoFlFAhAy/yTZDbaIgA/nMbjVYXkf8pz8rr75MN2VCw7yH60I3cw6bW5EuwddAeafZtBqbo8OsEGU7TIWFiAjg==}
@@ -2282,8 +2271,6 @@ snapshots:
     optionalDependencies:
       '@pkgjs/parseargs': 0.11.0
 
-  javascript-stringify@2.1.0: {}
-
   js-yaml@3.14.1:
     dependencies:
       argparse: 1.0.10
@@ -2748,11 +2735,6 @@ snapshots:
     optionalDependencies:
       fsevents: 2.3.3
       sass-embedded: 1.89.2
-
-  vitepress-plugin-announcement@0.1.4(vitepress@1.6.3(@algolia/client-search@5.29.0)(markdown-it-mathjax3@4.3.2)(nprogress@0.2.0)(postcss@8.5.6)(sass-embedded@1.89.2)(search-insights@2.17.3)(typescript@5.8.3)):
-    dependencies:
-      javascript-stringify: 2.1.0
-      vitepress: 1.6.3(@algolia/client-search@5.29.0)(markdown-it-mathjax3@4.3.2)(nprogress@0.2.0)(postcss@8.5.6)(sass-embedded@1.89.2)(search-insights@2.17.3)(typescript@5.8.3)
 
   vitepress-plugin-group-icons@1.6.1(markdown-it@14.1.0)(vite@5.4.19(sass-embedded@1.89.2)):
     dependencies:
