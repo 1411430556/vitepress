@@ -61,7 +61,7 @@ export default {
     if (typeof window !== 'undefined') {
       watch(
         () => router.route.data.relativePath,
-        () => updateHomePageStyle(location.pathname === '/'),
+        () => updateHomePageStyle(location.pathname === '/vitepress/'),
         { immediate: true },
       )
     }
