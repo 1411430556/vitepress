@@ -13,6 +13,8 @@ import MouseClick from './components/MouseClick.vue'
 import MouseFollower from './components/MouseFollower.vue'
 // 字数及阅读时间
 import ArticleMetadata from "./components/ArticleMetadata.vue"
+// 图片描述
+import '@theojs/lumen/style'
 // 代码组图标
 import 'virtual:group-icons.css'
 import './style.css'

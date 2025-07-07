@@ -3,6 +3,7 @@ import { groupIconMdPlugin, groupIconVitePlugin } from 'vitepress-plugin-group-i
 // import { AnnouncementPlugin } from 'vitepress-plugin-announcement'
 import { withSidebar } from 'vitepress-sidebar'
 import footnote from 'markdown-it-footnote'
+import { figure } from '@mdit/plugin-figure'
 
 // https://vitepress.dev/reference/site-config
 const vitePressOptions = {
@@ -20,7 +21,7 @@ const vitePressOptions = {
       dark: 'vitesse-dark',
     },
     config: md => {
-      md.use(footnote, groupIconMdPlugin)
+      md.use(footnote, groupIconMdPlugin, figure)
       // 在 h1 下增加字数以及阅读时间
       md.renderer.rules.heading_close = (tokens, idx, options, env, slf) => {
         let htmlResult = slf.renderToken(tokens, idx, options)
