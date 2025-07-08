@@ -21,7 +21,7 @@
 
 - 简洁优雅的界面设计
 - 支持情感故事内容展示
-- 中文本地搜索功能
+- Algolia 搜索功能
 - 响应式设计，适配各种设备
 - 自动生成侧边栏导航
 - 数学公式支持
@@ -30,12 +30,14 @@
 - 脚注功能
 - 自定义主题
 - 图片缩放预览
+- 文章阅读时间和字数统计
+- 进度条加载效果
 
 ## 本地开发
 
 ### 环境要求
 
-- Node.js 16.0 或更高版本
+- Node.js 16.0 或更高版本 (当前使用 22.16.0)
 - pnpm（推荐）或 npm
 
 ### 安装依赖
@@ -68,9 +70,10 @@ pnpm docs:preview
 ├── docs/                # 文档目录
 │   ├── .vitepress/      # VitePress 配置目录
 │   │   ├── config.mjs   # VitePress 配置文件
+│   │   ├── configs/     # 配置模块目录
 │   │   ├── theme/       # 主题自定义目录
 │   │   │   ├── index.ts     # 主题入口文件
-│   │   │   ├── MyLayout.vue # 自定义布局组件
+│   │   │   ├── components/  # 自定义组件目录
 │   │   │   └── style/       # 样式目录
 │   │   ├── cache/       # 缓存目录
 │   │   └── dist/        # 构建输出目录
@@ -92,9 +95,11 @@ pnpm docs:preview
 - [markdown-it-mathjax3](https://www.npmjs.com/package/markdown-it-mathjax3) v4.3.2 - 数学公式支持
 - [markdown-it-footnote](https://www.npmjs.com/package/markdown-it-footnote) v4.0.0 - 脚注功能
 - [vitepress-plugin-group-icons](https://www.npmjs.com/package/vitepress-plugin-group-icons) v1.6.1 - 代码组图标
-- [vitepress-plugin-announcement](https://www.npmjs.com/package/vitepress-plugin-announcement) v0.1.4 - 公告插件
+- [@mdit/plugin-figure](https://www.npmjs.com/package/@mdit/plugin-figure) v0.22.1 - 图片标题支持
 - [medium-zoom](https://www.npmjs.com/package/medium-zoom) v1.1.0 - 图片缩放
 - [nprogress-v2](https://www.npmjs.com/package/nprogress-v2) v1.1.10 - 进度条
+- [canvas-confetti](https://www.npmjs.com/package/canvas-confetti) v1.9.3 - 烟花特效
+- [@theojs/lumen](https://www.npmjs.com/package/@theojs/lumen) v6.0.0 - 文章元数据
 
 ## 部署
 
