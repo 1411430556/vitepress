@@ -137,3 +137,6 @@
   --docsearch-primary-color: var(--vp-c-brand-1) !important;
 }
 
+.VPMenu {
+  background-color: #ffffff !important;
+}
