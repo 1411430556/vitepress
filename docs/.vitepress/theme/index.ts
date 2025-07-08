@@ -20,7 +20,6 @@ import '@theojs/lumen/style'
 import 'virtual:group-icons.css'
 import './style.css'
 // import './custom.css'
-import './style/medium-zoom.scss'
 import './style/index.scss'
 // 明亮、暗黑模式切换
 import MyLayout from './components/MyLayout.vue'

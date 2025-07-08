@@ -4,11 +4,11 @@ export const algolia: DefaultTheme.AlgoliaSearchOptions = {
   appId: 'ENMGRL79Z2',
   apiKey: 'e380fd3a85e623eb7b04ee69ee7bb9c1',
   indexName: 'Secretly Diary',
-  placeholder: '搜索',
+  placeholder: '请输入关键词',
   translations: {
     button: {
-      buttonText: '搜索',
-      buttonAriaLabel: '搜索',
+      buttonText: '搜索文档',
+      buttonAriaLabel: '搜索文档',
     },
     modal: {
       searchBox: {
