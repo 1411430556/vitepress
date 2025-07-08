@@ -19,10 +19,11 @@ import '@theojs/lumen/style'
 // 代码组图标
 import 'virtual:group-icons.css'
 import './style.css'
-// import './custom.css'
 import './style/index.scss'
+// import './style/custom.css'
 // 明亮、暗黑模式切换
 import MyLayout from './components/MyLayout.vue'
+import RainbowAnimationSwitcher from './components/RainbowAnimationSwitcher.vue'
 // 切换路由进度条
 import { NProgress } from 'nprogress-v2/dist/index.js' // 进度条组件
 import 'nprogress-v2/dist/index.css' // 进度条样式
@@ -61,6 +62,7 @@ export default {
     app.component('MouseClick', MouseClick)
     app.component('MouseFollower', MouseFollower)
     app.component('ArticleMetadata', ArticleMetadata)
+    app.component('RainbowAnimationSwitcher', RainbowAnimationSwitcher)
     // 切换路由进度条
     if (inBrowser) {
       NProgress.configure({ showSpinner: false })

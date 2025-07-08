@@ -24,6 +24,7 @@
   },
   "dependencies": {
     "@theojs/lumen": "^6.0.0",
+    "@vueuse/core": "^13.5.0",
     "vitepress-plugin-group-icons": "^1.6.1"
   }
 }

@@ -3,7 +3,8 @@ import { groupIconMdPlugin, groupIconVitePlugin } from 'vitepress-plugin-group-i
 import { withSidebar } from 'vitepress-sidebar'
 import footnote from 'markdown-it-footnote'
 import { figure } from '@mdit/plugin-figure'
-import { algolia } from "./configs/algolia"
+import { algolia } from './configs/algolia'
+import { version } from '../../package.json'
 
 // https://vitepress.dev/reference/site-config
 const vitePressOptions = {
@@ -63,12 +64,18 @@ const vitePressOptions = {
     logo: '/蒙面人小偷.svg',
     nav: [
       {
-        text: '导航',
+        text: `v${version}`,
         items: [
           { text: '主页', link: '/index.md' },
           { text: '情感故事', link: '/文档/6-图书馆30秒' },
           { text: 'Go初学者', link: '/文档/7-Go初学者' },
           { text: '哔哩哔哩', link: 'https://space.bilibili.com/44113085' },
+          {
+            component: 'RainbowAnimationSwitcher',
+            props: {
+              text: '彩虹动画',
+            },
+          },
         ],
       },
     ],

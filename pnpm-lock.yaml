@@ -11,6 +11,9 @@ importers:
       '@theojs/lumen':
         specifier: ^6.0.0
         version: 6.0.0(vue@3.5.17(typescript@5.8.3))
+      '@vueuse/core':
+        specifier: ^13.5.0
+        version: 13.5.0(vue@3.5.17(typescript@5.8.3))
       vitepress-plugin-group-icons:
         specifier: ^1.6.1
         version: 1.6.1(markdown-it@14.1.0)(vite@5.4.19(sass-embedded@1.89.2))
