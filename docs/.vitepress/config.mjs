@@ -67,8 +67,7 @@ const vitePressOptions = {
         text: `v${version}`,
         items: [
           { text: '主页', link: '/index.md' },
-          { text: '情感故事', link: '/文档/6-图书馆30秒' },
-          { text: 'Go初学者', link: '/文档/7-Go初学者' },
+          { text: '提 Issues', link: 'https://github.com/1411430556/vitepress/issues?q=sort%3Aupdated-desc+is%3Aissue+is%3Aopen' },
           { text: '哔哩哔哩', link: 'https://space.bilibili.com/44113085' },
           {
             component: 'RainbowAnimationSwitcher',
