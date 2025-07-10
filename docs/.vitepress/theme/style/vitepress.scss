@@ -63,10 +63,33 @@ table {
 .VPSidebar .link:hover {
   color: var(--vp-c-brand-1);
 }
-
-.vp-doc a:hover,
 .vp-doc a > code:hover {
   color: var(--vp-c-brand-2);
+}
+
+// 选中链接后的文字颜色
+.vp-doc a:hover {
+  background: linear-gradient(90deg, #3131d0, #b008e8, #f3c304);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  text-decoration-color: #0ca8d8;
+}
+
+// 渐变色链接文字
+.vp-doc a {
+  background: linear-gradient(90deg, #3ec917, #ff8a00, #0ca8d8, #18c0ba, #d43f9d);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  text-decoration-color: #e90a49;
+}
+
+// 外部链接图标-小箭头
+.external-link-icon-enabled :is(.vp-doc a[href*='://'], .vp-doc a[target='_blank']):not(:is(.no-icon, svg a, :has(img, svg)))::after
+{
+  content: '';
+  color: #0ca8d8;
 }
 
 /* Transition by color instead of opacity */

@@ -67,7 +67,10 @@ const vitePressOptions = {
         text: `v${version}`,
         items: [
           { text: '主页', link: '/index.md' },
-          { text: '提 Issues', link: 'https://github.com/1411430556/vitepress/issues?q=sort%3Aupdated-desc+is%3Aissue+is%3Aopen' },
+          {
+            text: '提 Issues',
+            link: 'https://github.com/1411430556/vitepress/issues?q=sort%3Aupdated-desc+is%3Aissue+is%3Aopen',
+          },
           { text: '哔哩哔哩', link: 'https://space.bilibili.com/44113085' },
           {
             component: 'RainbowAnimationSwitcher',
@@ -89,9 +92,11 @@ const vitePressOptions = {
       copyright:
         'Copyright © 2025-present <a target="_blank" href="https://github.com/1411430556">COYG⚡️</a>',
     },
-    
+
+    // Algolia DocSearch 配置
     algolia,
-    // 是否在 markdown 中的外部链接旁显示外部链接图标
+
+    //是否在 markdown 中的外部链接旁显示外部链接图标
     externalLinkIcon: true,
   },
 }
