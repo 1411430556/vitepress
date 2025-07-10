@@ -9,8 +9,8 @@ importers:
   .:
     dependencies:
       '@theojs/lumen':
-        specifier: ^6.0.0
-        version: 6.0.0(vue@3.5.17(typescript@5.8.3))
+        specifier: ^6.1.0
+        version: 6.1.0(vue@3.5.17(typescript@5.8.3))
       '@vueuse/core':
         specifier: ^13.5.0
         version: 13.5.0(vue@3.5.17(typescript@5.8.3))
@@ -482,8 +482,8 @@ packages:
   '@shikijs/vscode-textmate@10.0.2':
     resolution: {integrity: sha512-83yeghZ2xxin3Nj8z1NMd/NCuca+gsYXswywDy5bHvwlWL8tpTQmzGeUuHd9FC3E/SBEMvzJRwWEOz5gGes9Qg==}
 
-  '@theojs/lumen@6.0.0':
-    resolution: {integrity: sha512-lZBxoL7jfgr/Q31teDV/NzOee5R4xrU3JjdGpfdE/+CyM6HDniItJd7uQ6qAJbcCID4mz3anmRPeXJBOp/QHBQ==}
+  '@theojs/lumen@6.1.0':
+    resolution: {integrity: sha512-a+GQbyKzCz3f2vPC11K0QTEfYuseUOmJ2cq0F2cEhZg2qsRHcP4t7Abc+gQKyQHV6mtnZIuUnzK5erl3qJgY0w==}
 
   '@types/estree@1.0.8':
     resolution: {integrity: sha512-dWHzHa2WqEXI/O1E9OjrocMTKJl2mSrEolh1Iomrv6U+JuNwaHXsXx9bLu5gG7BUWFIN0skIQJQ/L1rIex4X6w==}
@@ -1818,7 +1818,7 @@ snapshots:
 
   '@shikijs/vscode-textmate@10.0.2': {}
 
-  '@theojs/lumen@6.0.0(vue@3.5.17(typescript@5.8.3))':
+  '@theojs/lumen@6.1.0(vue@3.5.17(typescript@5.8.3))':
     dependencies:
       '@iconify/vue': 5.0.0(vue@3.5.17(typescript@5.8.3))
       '@waline/client': 3.5.7(typescript@5.8.3)

@@ -42,7 +42,7 @@ const vitePressOptions = {
   title: '偷偷日记',
   description: '偷偷日记',
   themeConfig: {
-    outline: [2, 6],
+    outline: 'deep',
     lightModeSwitchTitle: '切换到浅色模式',
     darkModeSwitchTitle: '切换到深色模式',
     lastUpdated: {

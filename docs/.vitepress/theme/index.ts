@@ -20,7 +20,7 @@ import '@theojs/lumen/pic'
 import 'virtual:group-icons.css'
 import './style.css'
 import './style/index.scss'
-// import './style/custom.css'
+import './style/custom.css'
 // 明亮、暗黑模式切换
 import MyLayout from './components/MyLayout.vue'
 import RainbowAnimationSwitcher from './components/RainbowAnimationSwitcher.vue'

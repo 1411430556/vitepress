@@ -1,6 +1,7 @@
 /* .vitepress/theme/style/index.css */
-// @use "./vp-code.css";
+@use "./vp-code.css";
 @use "./vp-code-group.css";
+@use "./vp-code-title.css";
 @use "./rainbow.css";
 @use "./blur.css";
 @use "./vars.scss";

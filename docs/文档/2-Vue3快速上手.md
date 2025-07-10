@@ -1,6 +1,6 @@
 ---
 title: Vue3快速上手
-order: 9
+order: 1
 ---
 
 # Vue3 快速上手
@@ -58,9 +58,9 @@ order: 9
    - 移除 keyCode 支持作为 v-on 的修饰符
    - ......
 
-# 一、创建 Vue3.0 工程
+## 一、创建 Vue3.0 工程
 
-## 1.使用 vue-cli 创建
+### 1.使用 vue-cli 创建
 
 官方文档：https://cli.vuejs.org/zh/guide/creating-a-project.html#vue-create
 
@@ -76,7 +76,7 @@ cd vue_test
 npm run serve
 ```
 
-## 2.使用 vite 创建
+### 2.使用 vite 创建
 
 官方文档：https://v3.cn.vuejs.org/guide/installation.html#vite
 
@@ -102,11 +102,11 @@ npm install
 npm run dev
 ```
 
-# 二、常用 Composition API
+## 二、常用 Composition API
 
 官方文档: https://v3.cn.vuejs.org/guide/composition-api-introduction.html
 
-## 1.拉开序幕的 setup
+### 1.拉开序幕的 setup
 
 1. 理解：Vue3.0 中一个新的配置项，值为一个函数。
 
@@ -131,7 +131,7 @@ npm run dev
 
    2. setup 不能是一个 async 函数，因为返回值不再是 return 的对象, 而是 promise, 模板看不到 return 对象中的属性。（<span alt="wavy">后期也可以返回一个 Promise 实例，但需要 Suspense 和异步组件的配合</span>）
 
-## 2.ref 函数
+### 2.ref 函数
 
 - 作用: 定义一个响应式的数据
 - 语法: `const xxx = ref(initValue)`
@@ -143,16 +143,16 @@ npm run dev
   - 基本类型的数据：响应式依然是靠`Object.defineProperty()`的`get`与`set`完成的。
   - 对象类型的数据：内部 <i style="color:gray;font-weight:bold">" 求助 "</i> 了 Vue3.0 中的一个新函数—— `reactive`函数。
 
-## 3.reactive 函数
+### 3.reactive 函数
 
-- 作用: 定义一个<strong style="color:#DD5145">对象类型</strong>的响应式数据（基本类型不要用它，要用`ref`函数）
+- 作用: 定义一个<strong style="color:#dD5145">对象类型</strong>的响应式数据（基本类型不要用它，要用`ref`函数）
 - 语法：`const 代理对象= reactive(源对象)`接收一个对象（或数组），返回一个<strong style="color:#DD5145">代理对象（Proxy 的实例对象，简称 proxy 对象）</strong>
 - reactive 定义的响应式数据是"深层次的"。
 - 内部基于 ES6 的 Proxy 实现，通过代理对象操作源对象内部数据进行操作。
 
-## 4.Vue3.0 中的响应式原理
+### 4.Vue3.0 中的响应式原理
 
-### vue2.x 的响应式
+#### vue2.x 的响应式
 
 - 实现原理：
 
@@ -171,7 +171,7 @@ npm run dev
   - 新增属性、删除属性, 界面不会更新。
   - 直接通过下标修改数组, 界面不会自动更新。
 
-### Vue3.0 的响应式
+#### Vue3.0 的响应式
 
 - 实现原理:
   - 通过 Proxy（代理）: 拦截对象中任意属性的变化, 包括：属性值的读写、属性的添加、属性的删除等。
@@ -201,7 +201,7 @@ npm run dev
       proxy.name = 'tom'
       ```
 
-## 5.reactive 对比 ref
+### 5.reactive 对比 ref
 
 - 从定义数据角度对比：
   - ref 用来定义：<strong style="color:#DD5145">基本类型数据</strong>。
@@ -214,7 +214,7 @@ npm run dev
   - ref 定义的数据：操作数据<strong style="color:#DD5145">需要</strong>`.value`，读取数据时模板中直接读取<strong style="color:#DD5145">不需要</strong>`.value`。
   - reactive 定义的数据：操作数据与读取数据：<strong style="color:#DD5145">均不需要</strong>`.value`。
 
-## 6.setup 的两个注意点
+### 6.setup 的两个注意点
 
 - setup 执行的时机
   - 在 beforeCreate 之前执行一次，this 是 undefined。
@@ -225,9 +225,9 @@ npm run dev
     - slots: 收到的插槽内容, 相当于 `this.$slots`。
     - emit: 分发自定义事件的函数, 相当于 `this.$emit`。
 
-## 7.计算属性与监视
+### 7.计算属性与监视
 
-### 1.computed 函数
+#### 1.computed 函数
 
 - 与 Vue2.x 中 computed 配置功能一致
 
@@ -256,7 +256,7 @@ npm run dev
   }
   ```
 
-### 2.watch 函数
+#### 2.watch 函数
 
 - 与 Vue2.x 中 watch 配置功能一致
 
@@ -331,7 +331,7 @@ npm run dev
   ) //此处由于监视的是reactive所定义的对象中的某个属性（这个属性的值是对象），所以deep配置有效
   ```
 
-### 3.watchEffect 函数
+#### 3.watchEffect 函数
 
 - watch 的套路是：既要指明监视的属性，也要指明监视的回调。
 
@@ -351,7 +351,7 @@ npm run dev
   })
   ```
 
-## 8.生命周期
+### 8.生命周期
 
 ![vue2生命周期](/images/vue2-lifecycle.png)
 
@@ -370,7 +370,7 @@ npm run dev
   - `beforeUnmount` ==>`onBeforeUnmount`
   - `unmounted` =====>`onUnmounted`
 
-## 9.自定义 hook 函数
+### 9.自定义 hook 函数
 
 - 什么是 hook？—— 本质是一个函数，把 setup 函数中使用的 Composition API 进行了封装。
 
@@ -378,7 +378,7 @@ npm run dev
 
 - 自定义 hook 的优势: 复用代码, 让 setup 中的逻辑更清楚易懂。
 
-## 10.toRef 和 toRefs
+### 10.toRef 和 toRefs
 
 - 作用：创建一个 ref 对象，其 value 值指向另一个对象中的某个属性。
 - 语法：`const name = toRef(person,'name')`
@@ -386,9 +386,9 @@ npm run dev
 
 - 扩展：`toRefs` 与`toRef`功能一致，但可以批量创建多个 ref 对象，语法：`...toRefs(person)`
 
-# 三、其它 Composition API
+## 三、其它 Composition API
 
-## 1.shallowReactive 与 shallowRef
+### 1.shallowReactive 与 shallowRef
 
 <span alt="wavy">这一块推荐去这里看</span>https://juejin.cn/post/7016883358504337444#comment
 
@@ -412,13 +412,13 @@ npm run dev
     >
     > https://juejin.cn/post/6975137341128540190
 
-## 2.readonly 与 shallowReadonly
+### 2.readonly 与 shallowReadonly
 
 - readonly: 让一个响应式数据变为只读的（深只读）。
 - shallowReadonly：让一个响应式数据变为只读的（浅只读）。
 - 应用场景: 不希望数据被修改时。
 
-## 3.toRaw 与 markRaw
+### 3.toRaw 与 markRaw
 
 - toRaw：
   - 作用：将一个由`reactive`生成的<strong style="color:orange">响应式对象</strong>转为<strong style="color:orange">普通对象</strong>。
@@ -490,7 +490,7 @@ npm run dev
 
        <img src="/images/code-screenshot.png" style="zoom:33%;" />
 
-## 4.customRef
+### 4.customRef
 
 - 作用：创建一个自定义的 ref，并对其依赖项跟踪和更新触发进行显式控制。
 
@@ -539,7 +539,7 @@ npm run dev
   </script>
   ```
 
-## 5.provide 与 inject
+### 5.provide 与 inject
 
 > `provide` 和 `inject` 可以帮助我们解决这一问题。一个父组件相对于其所有的后代组件，会作为**依赖提供者**。任何后代的组件树，无论层级有多深，都可以**注入**由父组件提供给整条链路的依赖。
 
@@ -573,16 +573,16 @@ npm run dev
      }
      ```
 
-## 6.响应式数据的判断
+### 6.响应式数据的判断
 
 - isRef: 检查一个值是否为一个 ref 对象
 - isReactive: 检查一个对象是否是由 `reactive` 创建的响应式代理
 - isReadonly: 检查一个对象是否是由 `readonly` 创建的只读代理
 - isProxy: 检查一个对象是否是由 `reactive` 或者 `readonly` 方法创建的代理
 
-# 四、Composition API 的优势
+## 四、Composition API 的优势
 
-## 1.Options API 存在的问题
+### 1.Options API 存在的问题
 
 使用传统 OptionsAPI 中，新增或者修改一个需求，就需要分别在 data，methods，computed 里修改 。
 
@@ -590,7 +590,7 @@ npm run dev
 
 <img src='https://p9-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/e5ac7e20d1784887a826f6360768a368~tplv-k3u1fbpfcp-watermark.image'  >
 
-## 2.Composition API 的优势
+### 2.Composition API 的优势
 
 我们可以更加优雅的组织我们的代码，函数。让相关功能的代码更加有序的组织在一起。
 
@@ -598,15 +598,15 @@ npm run dev
 
 <img src='https://p9-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/6cc55165c0e34069a75fe36f8712eb80~tplv-k3u1fbpfcp-watermark.image'>
 
-# 五、新的组件
+## 五、新的组件
 
-## 1.Fragment
+### 1.Fragment
 
 - 在 Vue2 中: 组件必须有一个根标签
 - 在 Vue3 中: 组件可以没有根标签, 内部会将多个标签包含在一个 Fragment 虚拟元素中
 - 好处: 减少标签层级, 减小内存占用
 
-## 2.Teleport
+### 2.Teleport
 
 - 什么是 Teleport？—— `Teleport` 是一种能够将我们的<strong style="color:#DD5145">组件 html 结构</strong>移动到指定位置的技术。
 
@@ -621,7 +621,7 @@ npm run dev
   </teleport>
   ```
 
-## 3.Suspense
+### 3.Suspense
 
 - 等待异步组件时渲染一些额外内容，让应用有更好的用户体验
 
@@ -652,9 +652,9 @@ npm run dev
     </template>
     ```
 
-# 六、其他
+## 六、其他
 
-## 1.全局 API 的转移
+### 1.全局 API 的转移
 
 - Vue 2.x 有许多全局 API 和配置。
 
@@ -689,7 +689,7 @@ npm run dev
     | Vue.use                  | app.use                                     |
     | Vue.prototype            | app.config.globalProperties                 |
 
-## 2.其他改变
+### 2.其他改变
 
 - data 选项应始终被声明为一个函数。
 

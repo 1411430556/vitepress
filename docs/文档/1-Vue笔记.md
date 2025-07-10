@@ -1,6 +1,6 @@
 ---
 title: Vue笔记
-order: 8
+order: 0
 ---
 
 # Vue 笔记
