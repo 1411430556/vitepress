@@ -1,6 +1,6 @@
 <div align="center">
   
-# 偷偷日记
+# 游戏日记
 
 ![GitHub stars](https://img.shields.io/github/stars/1411430556/vitepress?style=flat-square&logo=github&color=yellow&label=Stars)
 ![GitHub forks](https://img.shields.io/github/forks/1411430556/vitepress?style=flat-square&logo=github&color=blue&label=Forks)

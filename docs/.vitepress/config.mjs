@@ -38,9 +38,9 @@ const vitePressOptions = {
     ],
   },
   base: '/vitepress',
-  head: [['link', { rel: 'icon', href: '/vitepress/蒙面人小偷.svg' }]],
-  title: '偷偷日记',
-  description: '偷偷日记',
+  head: [['link', { rel: 'icon', href: '/vitepress/游戏机_game-ps.svg' }]],
+  title: '游戏日记',
+  description: '游戏日记',
   themeConfig: {
     outline: 'deep',
     lightModeSwitchTitle: '切换到浅色模式',
@@ -61,7 +61,7 @@ const vitePressOptions = {
       next: '下一页',
     },
     // https://vitepress.dev/reference/default-theme-config
-    logo: '/蒙面人小偷.svg',
+    logo: '/游戏机_game-ps.svg',
     nav: [
       {
         text: `v${version}`,
