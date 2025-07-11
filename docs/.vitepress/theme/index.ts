@@ -13,7 +13,7 @@ import MouseClick from './components/MouseClick.vue'
 // 鼠标粒子跟随效果
 import MouseFollower from './components/MouseFollower.vue'
 // 字数及阅读时间
-import ArticleMetadata from "./components/ArticleMetadata.vue"
+import ArticleMetadata from './components/ArticleMetadata.vue'
 // 图片描述
 import '@theojs/lumen/pic'
 // 代码组图标
@@ -27,6 +27,8 @@ import RainbowAnimationSwitcher from './components/RainbowAnimationSwitcher.vue'
 // 切换路由进度条
 import { NProgress } from 'nprogress-v2/dist/index.js' // 进度条组件
 import 'nprogress-v2/dist/index.css' // 进度条样式
+// 视频组件
+import { Vid, BoxCube, Card, Links, Pill } from '@theojs/lumen'
 
 // 彩虹背景动画样式
 let homePageStyle: HTMLStyleElement | undefined
@@ -63,6 +65,11 @@ export default {
     app.component('MouseFollower', MouseFollower)
     app.component('ArticleMetadata', ArticleMetadata)
     app.component('RainbowAnimationSwitcher', RainbowAnimationSwitcher)
+    app.component('Vid', Vid)
+    app.component('Pill', Pill)
+    app.component('Links', Links)
+    app.component('Card', Card)
+    app.component('BoxCube', BoxCube)
     // 切换路由进度条
     if (inBrowser) {
       NProgress.configure({ showSpinner: false })

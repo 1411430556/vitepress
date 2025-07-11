@@ -2,48 +2,54 @@
   "hash": "1450ac2d",
   "configHash": "c4ff5e8c",
   "lockfileHash": "8dcb8767",
-  "browserHash": "81926570",
+  "browserHash": "89ef1fc7",
   "optimized": {
     "vue": {
       "src": "../../../../node_modules/.pnpm/vue@3.5.17/node_modules/vue/dist/vue.runtime.esm-bundler.js",
       "file": "vue.js",
-      "fileHash": "ad11029f",
+      "fileHash": "04807a96",
       "needsInterop": false
     },
     "vitepress > @vue/devtools-api": {
       "src": "../../../../node_modules/.pnpm/@vue+devtools-api@7.7.7/node_modules/@vue/devtools-api/dist/index.js",
       "file": "vitepress___@vue_devtools-api.js",
-      "fileHash": "d9f7b681",
+      "fileHash": "7aaa6dfa",
       "needsInterop": false
     },
     "vitepress > @vueuse/core": {
       "src": "../../../../node_modules/.pnpm/@vueuse+core@12.8.2_typescript@5.8.3/node_modules/@vueuse/core/index.mjs",
       "file": "vitepress___@vueuse_core.js",
-      "fileHash": "ab87e668",
+      "fileHash": "2225eeb4",
       "needsInterop": false
     },
     "medium-zoom": {
       "src": "../../../../node_modules/.pnpm/medium-zoom@1.1.0/node_modules/medium-zoom/dist/medium-zoom.esm.js",
       "file": "medium-zoom.js",
-      "fileHash": "52141056",
+      "fileHash": "23328864",
       "needsInterop": false
     },
     "nprogress-v2/dist/index.js": {
       "src": "../../../../node_modules/.pnpm/nprogress-v2@1.1.10/node_modules/nprogress-v2/dist/index.js",
       "file": "nprogress-v2_dist_index__js.js",
-      "fileHash": "232c1e7d",
+      "fileHash": "b2894ac0",
       "needsInterop": true
     },
     "canvas-confetti": {
       "src": "../../../../node_modules/.pnpm/canvas-confetti@1.9.3/node_modules/canvas-confetti/dist/confetti.module.mjs",
       "file": "canvas-confetti.js",
-      "fileHash": "0987b852",
+      "fileHash": "4d722fc1",
       "needsInterop": false
     },
     "@vueuse/core": {
       "src": "../../../../node_modules/.pnpm/@vueuse+core@13.5.0_vue@3.5.17_typescript@5.8.3_/node_modules/@vueuse/core/index.mjs",
       "file": "@vueuse_core.js",
-      "fileHash": "dba1f177",
+      "fileHash": "9cbf1f50",
+      "needsInterop": false
+    },
+    "@theojs/lumen": {
+      "src": "../../../../node_modules/.pnpm/@theojs+lumen@6.1.0_vue@3.5.17_typescript@5.8.3_/node_modules/@theojs/lumen/types/index.ts",
+      "file": "@theojs_lumen.js",
+      "fileHash": "7e086351",
       "needsInterop": false
     }
   },

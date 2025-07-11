@@ -5,6 +5,23 @@ order: 0
 
 # Vue 笔记
 
+---
+<span style="font-weight: bold; font-size: 1.1em">This is my</span> <Pill
+  name="GitHub"
+  link="https://github.com/1411430556"
+  :icon="{ icon: 'line-md:github-loop' }"
+  :size="16"
+  rel="noopener noreferrer"
+/><Pill
+  name="哔哩哔哩"
+  link="https://space.bilibili.com/44113085"
+  :icon="{ icon: 'arcticons:bilibili',
+    color: { light: '#0BA5D8', dark: '#FFFFFF' }
+   }"
+  :size="16"
+  rel="noopener noreferrer"
+/>
+
 ## 脚手架文件结构
 
 ```bash
