@@ -26,7 +26,7 @@ const vitePressOptions = {
       // 在 h1 下增加字数以及阅读时间
       md.renderer.rules.heading_close = (tokens, idx, options, env, slf) => {
         let htmlResult = slf.renderToken(tokens, idx, options)
-        if (tokens[idx].tag === 'h1') htmlResult += `<ArticleMetadata />` // [!code focus]
+        if (tokens[idx].tag === 'h1') htmlResult += `<ArticleMetadata />`
         return htmlResult
       }
     },

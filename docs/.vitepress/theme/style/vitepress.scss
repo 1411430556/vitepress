@@ -83,7 +83,6 @@ table {
 
 // 选中链接后的文字颜色
 .vp-doc a:hover {
-  // background: linear-gradient(90deg, #22d3a1, #e14370, #f3c304);
   background: linear-gradient(90deg, #ffffd1, #ff531e, #000000, #0bbc91);
   background-size: 200% auto;
   -webkit-background-clip: text;
@@ -96,7 +95,6 @@ table {
 // 渐变色链接文字
 .vp-doc a {
   background: linear-gradient(90deg, #3ec917, #ff8a00, #b3d80c, #18c0ba, #d43f9d);
-  // background: linear-gradient(90deg, #ffdeea, #ffe8fa, #f9f2ff, #ecfcff, #dbffff, #c7ffff, #b5fffb);
   background-size: 300% auto;
   -webkit-background-clip: text;
   background-clip: text;
