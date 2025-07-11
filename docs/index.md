@@ -8,7 +8,7 @@ hero:
   text: 仍怜故乡水,万里送行舟
   tagline: 大鹏一日同风起，扶摇直上九万里
   image:
-    src: /Game.svg
+    src: /赛博朋克AR.svg
     alt: 背景图
   actions:
     - theme: brand
