@@ -9,8 +9,8 @@ importers:
   .:
     dependencies:
       '@theojs/lumen':
-        specifier: ^6.1.0
-        version: 6.1.0(vue@3.5.17(typescript@5.8.3))
+        specifier: ^6.1.1
+        version: 6.1.1(vue@3.5.17(typescript@5.8.3))
       '@vueuse/core':
         specifier: ^13.5.0
         version: 13.5.0(vue@3.5.17(typescript@5.8.3))
@@ -482,8 +482,8 @@ packages:
   '@shikijs/vscode-textmate@10.0.2':
     resolution: {integrity: sha512-83yeghZ2xxin3Nj8z1NMd/NCuca+gsYXswywDy5bHvwlWL8tpTQmzGeUuHd9FC3E/SBEMvzJRwWEOz5gGes9Qg==}
 
-  '@theojs/lumen@6.1.0':
-    resolution: {integrity: sha512-a+GQbyKzCz3f2vPC11K0QTEfYuseUOmJ2cq0F2cEhZg2qsRHcP4t7Abc+gQKyQHV6mtnZIuUnzK5erl3qJgY0w==}
+  '@theojs/lumen@6.1.1':
+    resolution: {integrity: sha512-8VMkx+AKlPovcZ0GDoSGjIgS8m5hCCQ718gY+kg2nAouyqX67UP4KCZpj206u6Z7wiWzUr0k3VorpIkoMDeLhA==}
 
   '@types/estree@1.0.8':
     resolution: {integrity: sha512-dWHzHa2WqEXI/O1E9OjrocMTKJl2mSrEolh1Iomrv6U+JuNwaHXsXx9bLu5gG7BUWFIN0skIQJQ/L1rIex4X6w==}
@@ -624,8 +624,8 @@ packages:
     resolution: {integrity: sha512-o0lWjt+/oZH1/4q3DJxTf5kdkgNbSmoLRXIiGznW225A6hq9/9IkOO1DiAijIsxGYJS6psFC+58+IzkD1EerBA==}
     engines: {node: '>=18'}
 
-  '@waline/client@3.5.7':
-    resolution: {integrity: sha512-9DMlO9fiOgnBQRCIlyasfe0mbpIe4fgecsbOLhai1TbAa9XONFfZYvHoqppedfiyT8Wi156PUFgGNkXFIJowEg==}
+  '@waline/client@3.6.0':
+    resolution: {integrity: sha512-GzRHOpyveRlJamS/QOQ6OItYzvU6px4wtb9enGiwtWcODHSgU+21GZd++czjLwwiyiEgMNOCe8Wqll4ianI38w==}
     engines: {node: '>=18'}
 
   '@xmldom/xmldom@0.9.8':
@@ -946,9 +946,9 @@ packages:
     peerDependencies:
       marked: '>=4 <17'
 
-  marked@15.0.12:
-    resolution: {integrity: sha512-8dD6FusOQSrpv9Z1rdNMdlSgQOIP880DHqnohobOmYLElGEqAL/JvxvuxZO16r4HtjTlfPRDC1hbvxC9dPN2nA==}
-    engines: {node: '>= 18'}
+  marked@16.0.0:
+    resolution: {integrity: sha512-MUKMXDjsD/eptB7GPzxo4xcnLS6oo7/RHimUMHEDRhUooPwmN9BEpMl7AEOJv3bmso169wHI2wUF9VQgL7zfmA==}
+    engines: {node: '>= 20'}
     hasBin: true
 
   mathjax-full@3.2.2:
@@ -1818,10 +1818,10 @@ snapshots:
 
   '@shikijs/vscode-textmate@10.0.2': {}
 
-  '@theojs/lumen@6.1.0(vue@3.5.17(typescript@5.8.3))':
+  '@theojs/lumen@6.1.1(vue@3.5.17(typescript@5.8.3))':
     dependencies:
       '@iconify/vue': 5.0.0(vue@3.5.17(typescript@5.8.3))
-      '@waline/client': 3.5.7(typescript@5.8.3)
+      '@waline/client': 3.6.0(typescript@5.8.3)
       iconify-icon: 3.0.0
       typescript: 5.8.3
     transitivePeerDependencies:
@@ -1972,13 +1972,13 @@ snapshots:
 
   '@waline/api@1.0.0': {}
 
-  '@waline/client@3.5.7(typescript@5.8.3)':
+  '@waline/client@3.6.0(typescript@5.8.3)':
     dependencies:
       '@vueuse/core': 13.5.0(vue@3.5.17(typescript@5.8.3))
       '@waline/api': 1.0.0
       autosize: 6.0.1
-      marked: 15.0.12
-      marked-highlight: 2.2.2(marked@15.0.12)
+      marked: 16.0.0
+      marked-highlight: 2.2.2(marked@16.0.0)
       recaptcha-v3: 1.11.3
       vue: 3.5.17(typescript@5.8.3)
     transitivePeerDependencies:
@@ -2329,11 +2329,11 @@ snapshots:
       punycode.js: 2.3.1
       uc.micro: 2.1.0
 
-  marked-highlight@2.2.2(marked@15.0.12):
+  marked-highlight@2.2.2(marked@16.0.0):
     dependencies:
-      marked: 15.0.12
+      marked: 16.0.0
 
-  marked@15.0.12: {}
+  marked@16.0.0: {}
 
   mathjax-full@3.2.2:
     dependencies:

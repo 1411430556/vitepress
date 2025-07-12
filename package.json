@@ -23,7 +23,7 @@
     "docs:preview": "vitepress preview docs"
   },
   "dependencies": {
-    "@theojs/lumen": "^6.1.0",
+    "@theojs/lumen": "^6.1.1",
     "@vueuse/core": "^13.5.0",
     "vitepress-plugin-group-icons": "^1.6.1"
   }
