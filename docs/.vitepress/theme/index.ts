@@ -27,7 +27,7 @@ import RainbowAnimationSwitcher from './components/RainbowAnimationSwitcher.vue'
 // 切换路由进度条
 import { NProgress } from 'nprogress-v2/dist/index.js' // 进度条组件
 import 'nprogress-v2/dist/index.css' // 进度条样式
-// 视频组件
+// 视频组件等
 import { Vid, BoxCube, Card, Links, Pill } from '@theojs/lumen'
 
 // 彩虹背景动画样式
