@@ -5,7 +5,7 @@ order: 9
 
 # ZZZ模拟器
 
-[English](./1-ZZZ_Simulator.md) | 中文
+[English](./9-ZZZ_Simulator) | 中文
 
 ## 项目介绍
 

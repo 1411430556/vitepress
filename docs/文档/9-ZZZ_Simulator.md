@@ -5,7 +5,7 @@ order: 8
 
 # ZZZ_Simulator
 
-English | [中文](./2-ZZZ模拟器.md)
+English | [中文](./10-ZZZ模拟器)
 
 ![zsim](../public/images/zsim成图.svg)
 
