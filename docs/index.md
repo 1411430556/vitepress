@@ -13,10 +13,10 @@ hero:
   actions:
     - theme: brand
       text: 开始
-      link: /文档/1-Vue笔记
+      link: /编程/1-Vue笔记
     - theme: alt
       text: API Examples
-      link: /文档/8-api-examples
+      link: /编程/8-api-examples
 
 features:
   - icon: ⚡️

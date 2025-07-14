@@ -115,6 +115,8 @@ const vitePressSidebarOptions = {
   // useTitleFromFileHeading: true,
   // 根据文件Frontmatter中title的值显示标题
   useTitleFromFrontmatter: true,
+  // 按文件名（包括扩展名）数组的顺序排序。如果数组中没有与文件名匹配的值，排序优先级将被退回。这适用于文件和目录，同样的排列规则也适用于子目录。
+  manualSortFileNameByPriority: ['编程', '策略', '游戏新闻'],
 }
 
 export default defineConfig(withSidebar(vitePressOptions, vitePressSidebarOptions))
