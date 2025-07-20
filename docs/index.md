@@ -12,11 +12,11 @@ hero:
     alt: 背景图
   actions:
     - theme: brand
-      text: 开始
-      link: /编程/1-Vue笔记
+      text: 壁纸推荐
+      link: /壁纸推荐/1-Wallpaper精选壁纸推荐
     - theme: alt
-      text: API Examples
-      link: /编程/8-api-examples
+      text: 游戏新闻
+      link: /游戏新闻/1-MSI半决赛
 
 features:
   - icon: ⚡️
