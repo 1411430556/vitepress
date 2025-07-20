@@ -9,14 +9,17 @@ importers:
   .:
     dependencies:
       '@theojs/lumen':
-        specifier: ^6.1.1
-        version: 6.1.1(vue@3.5.17(typescript@5.8.3))
+        specifier: ^6.3.1
+        version: 6.3.1(vue@3.5.17(typescript@5.8.3))
       '@vueuse/core':
         specifier: ^13.5.0
         version: 13.5.0(vue@3.5.17(typescript@5.8.3))
       vitepress-plugin-group-icons:
         specifier: ^1.6.1
         version: 1.6.1(markdown-it@14.1.0)(vite@5.4.19(sass-embedded@1.89.2))
+      vue:
+        specifier: ^3.5.17
+        version: 3.5.17(typescript@5.8.3)
     devDependencies:
       '@mdit/plugin-figure':
         specifier: ^0.22.1
@@ -482,8 +485,8 @@ packages:
   '@shikijs/vscode-textmate@10.0.2':
     resolution: {integrity: sha512-83yeghZ2xxin3Nj8z1NMd/NCuca+gsYXswywDy5bHvwlWL8tpTQmzGeUuHd9FC3E/SBEMvzJRwWEOz5gGes9Qg==}
 
-  '@theojs/lumen@6.1.1':
-    resolution: {integrity: sha512-8VMkx+AKlPovcZ0GDoSGjIgS8m5hCCQ718gY+kg2nAouyqX67UP4KCZpj206u6Z7wiWzUr0k3VorpIkoMDeLhA==}
+  '@theojs/lumen@6.3.1':
+    resolution: {integrity: sha512-02Og4LYlyFoyea88vdmDA/NPgrp9YZoJeL9V7PnyWbOS2JHRCOFQGyBUzTvkbg67Naz4c1A9TZral1Boo04t1g==}
 
   '@types/estree@1.0.8':
     resolution: {integrity: sha512-dWHzHa2WqEXI/O1E9OjrocMTKJl2mSrEolh1Iomrv6U+JuNwaHXsXx9bLu5gG7BUWFIN0skIQJQ/L1rIex4X6w==}
@@ -1818,7 +1821,7 @@ snapshots:
 
   '@shikijs/vscode-textmate@10.0.2': {}
 
-  '@theojs/lumen@6.1.1(vue@3.5.17(typescript@5.8.3))':
+  '@theojs/lumen@6.3.1(vue@3.5.17(typescript@5.8.3))':
     dependencies:
       '@iconify/vue': 5.0.0(vue@3.5.17(typescript@5.8.3))
       '@waline/client': 3.6.0(typescript@5.8.3)
