@@ -15,7 +15,7 @@
     "nprogress-v2": "^1.1.10",
     "sass-embedded": "^1.89.2",
     "vitepress": "^1.6.3",
-    "vitepress-sidebar": "^1.32.1"
+    "vitepress-sidebar": "^1.33.0"
   },
   "scripts": {
     "docs:dev": "vitepress dev docs --host",
