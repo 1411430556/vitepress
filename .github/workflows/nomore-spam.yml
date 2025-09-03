@@ -21,3 +21,4 @@ jobs:
         uses: JohnsonRan/nomore-spam@main
         with:
           github-token: ${{ github.token }}
+          labels: 'bug,enhancement,question'
