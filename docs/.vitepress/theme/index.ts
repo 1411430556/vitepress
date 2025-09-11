@@ -57,7 +57,7 @@ export default {
       // https://vitepress.dev/guide/extending-default-theme#layout-slots
     })
   },
-  enhanceApp({ app, router, siteData }) {
+  async enhanceApp({ app, router, siteData }) {
     // 注册全局组件
     app.component('HomeUnderline', HomeUnderline)
     app.component('confetti', confetti)
@@ -89,6 +89,17 @@ export default {
         () => updateHomePageStyle(location.pathname === '/vitepress/'),
         { immediate: true },
       )
+    }
+    // Livw2D看板娘
+    if (typeof window !== 'undefined') {
+      const { loadOml2d } = await import('oh-my-live2d')
+      loadOml2d({
+        models: [
+          {
+            path: 'https://raw.githubusercontent.com/iCharlesZ/vscode-live2d-models/master/model-library/girls-frontline/HK416-2/normal/model.json',
+          },
+        ],
+      })
     }
   },
 } satisfies Theme

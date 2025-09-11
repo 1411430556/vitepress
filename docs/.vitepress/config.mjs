@@ -95,7 +95,6 @@ const vitePressOptions = {
 
     // Algolia DocSearch 配置
     algolia,
-
     //是否在 markdown 中的外部链接旁显示外部链接图标
     externalLinkIcon: true,
   },

@@ -14,6 +14,9 @@ importers:
       '@vueuse/core':
         specifier: ^13.5.0
         version: 13.5.0(vue@3.5.17(typescript@5.8.3))
+      oh-my-live2d:
+        specifier: ^0.19.3
+        version: 0.19.3
       vitepress-plugin-group-icons:
         specifier: ^1.6.1
         version: 1.6.1(markdown-it@14.1.0)(vite@5.4.19(sass-embedded@1.89.2))
@@ -1037,6 +1040,9 @@ packages:
 
   nth-check@2.1.1:
     resolution: {integrity: sha512-lqjrjmaOoAnWfMmBPL+XNnynZh2+swxiX3WUE0s4yEHI6m+AwrK2UZOimIRl3X/4QctVqS8AiZjFqyOGrMXb/w==}
+
+  oh-my-live2d@0.19.3:
+    resolution: {integrity: sha512-EWva8OUmcExIFIhqGkeiVPQt44RvYYFg+nmpkrZgQVQ+xofVFq4SDYAg5NcdK40HxyV4vORBJEg4OHIHP96MrA==}
 
   oniguruma-to-es@3.1.1:
     resolution: {integrity: sha512-bUH8SDvPkH3ho3dvwJwfonjlQ4R80vjyvrU8YpxuROddv55vAEJrTuCuCVUhhsHbtlD9tGGbaNApGQckXhS8iQ==}
@@ -2419,6 +2425,8 @@ snapshots:
   nth-check@2.1.1:
     dependencies:
       boolbase: 1.0.0
+
+  oh-my-live2d@0.19.3: {}
 
   oniguruma-to-es@3.1.1:
     dependencies:
