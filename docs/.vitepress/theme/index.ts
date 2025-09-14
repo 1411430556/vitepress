@@ -28,7 +28,7 @@ import RainbowAnimationSwitcher from './components/RainbowAnimationSwitcher.vue'
 import { NProgress } from 'nprogress-v2/dist/index.js' // 进度条组件
 import 'nprogress-v2/dist/index.css' // 进度条样式
 // 视频组件等
-import { Vid, BoxCube, Card, Links, Pill } from '@theojs/lumen'
+import { Vid, BoxCube, Card, Links, Pill, baiduAnalytics, trackPageview } from '@theojs/lumen'
 
 // 彩虹背景动画样式
 let homePageStyle: HTMLStyleElement | undefined
@@ -100,6 +100,12 @@ export default {
           },
         ],
       })
+    }
+
+    // 百度统计
+    baiduAnalytics({ baiduId: 'dc007aeb3395ec94cba1952cef82da90' })
+    if (typeof window !== 'undefined') {
+      trackPageview('dc007aeb3395ec94cba1952cef82da90', window.location.href)
     }
   },
 } satisfies Theme
