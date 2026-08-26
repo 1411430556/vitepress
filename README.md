@@ -119,10 +119,10 @@ pnpm docs:preview
 
 ## Star History
 
-<a href="https://www.star-history.com/#1411430556/vitepress&Date">
+<a href="https://www.star-history.com/?repos=1411430556%2Fvitepress&type=date&legend=top-left">
  <picture>
-   <source media="(prefers-color-scheme: dark)" srcset="https://api.star-history.com/svg?repos=1411430556/vitepress&type=Date&theme=dark" />
-   <source media="(prefers-color-scheme: light)" srcset="https://api.star-history.com/svg?repos=1411430556/vitepress&type=Date" />
-   <img alt="Star History Chart" src="https://api.star-history.com/svg?repos=1411430556/vitepress&type=Date" />
+   <source media="(prefers-color-scheme: dark)" srcset="https://api.star-history.com/chart?repos=1411430556/vitepress&type=date&theme=dark&legend=top-left&sealed_token=lKagZ8SS6gBel-3Ey7JdkiE1RMn12JqimZCSSxEftAnQ0s4pFIEwvhTgM4gAR-7sRYZARS2d8EsKcX3TzPtdmeJBrCQ_mzWqj5n6x8wrQViba-mrk61zAw" />
+   <source media="(prefers-color-scheme: light)" srcset="https://api.star-history.com/chart?repos=1411430556/vitepress&type=date&legend=top-left&sealed_token=lKagZ8SS6gBel-3Ey7JdkiE1RMn12JqimZCSSxEftAnQ0s4pFIEwvhTgM4gAR-7sRYZARS2d8EsKcX3TzPtdmeJBrCQ_mzWqj5n6x8wrQViba-mrk61zAw" />
+   <img alt="Star History Chart" src="https://api.star-history.com/chart?repos=1411430556/vitepress&type=date&legend=top-left&sealed_token=lKagZ8SS6gBel-3Ey7JdkiE1RMn12JqimZCSSxEftAnQ0s4pFIEwvhTgM4gAR-7sRYZARS2d8EsKcX3TzPtdmeJBrCQ_mzWqj5n6x8wrQViba-mrk61zAw" />
  </picture>
 </a>
