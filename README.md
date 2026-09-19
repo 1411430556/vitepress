@@ -14,7 +14,7 @@
 
 [![Security Status](https://www.murphysec.com/platform3/v31/badge/1940988725560365056.svg)](https://www.murphysec.com/console/report/1940988725426147328/1940988725560365056)
 
-这是一个基于 [VitePress](https://vitepress.dev/) 构建的个人网站，主要分享游戏相关内容、壁纸推荐、技术笔记和情感故事。
+这是一个基于 [VitePress](https://vitepress.dev/zh/) 构建的个人网站，主要分享游戏相关内容、壁纸推荐、技术笔记和情感故事。
 </div>
 
 ## 功能特点
